@@ -3,33 +3,11 @@ import os
 import hashlib
 import filetype
 
-from sqlalchemy import create_engine, Column, String, Integer
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy.ext.declarative import declarative_base
+from create_db import Session, Web_Assets
 
 from pywebcopy import WebPage, config, save_webpage
 from urllib.parse import urlparse
 
-engine = create_engine('sqlite:///test.sqlite') #Create test.sqlite automatically
-Base = declarative_base()
-
-class Web_Assets(Base): 
-    __tablename__ = 'web_assets'
-
-    id = Column(Integer, primary_key=True)
-    netloc = Column(String)
-    filename = Column(String)
-    hexdigest = Column(String)
-    extension = Column(String)
-
-    def __init__(self, netloc, filename, hexdigest, extension):
-        self.netloc = netloc
-        self.filename = filename
-        self.hexdigest = hexdigest
-        self.extension = extension
-
-Base.metadata.create_all(engine)
-Session = sessionmaker(bind=engine)
 session = Session()
 
 def download_webpage(url: str):        
@@ -46,6 +24,7 @@ def download_webpage(url: str):
 def hash_assets(netloc: str):
     print("Retrieving hash hexdigest of content")
     print(os.getcwd())
+    print(os.path.join(os.getcwd(), netloc))
     for root, dirs, files in os.walk(os.path.join('./', netloc)):
         for f in files:
             md5_hash = hashlib.md5() 
@@ -57,6 +36,7 @@ def hash_assets(netloc: str):
                     md5_hash.update(byte_block)
             file_insert = Web_Assets(netloc, f_name, md5_hash.hexdigest(), f_ext_type)
             session.add(file_insert)
+            print('Asset added')
     session.commit()
 
 # id, netloc, hash hexdigest, file_name, file extension 
