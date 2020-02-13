@@ -1,6 +1,5 @@
 import docker
 import sys
-import subprocess
 import json
 
 from urllib.parse import urlparse
