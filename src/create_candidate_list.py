@@ -19,16 +19,23 @@ def call_dnstwist(netloc: str):
             continue
         break
 
-def create_extended_watchlist():
+def create_candidate_list():
     with open('out.json', 'r') as f:
         output = json.load(f)
         with open('candidate_list.txt', 'w+') as extended_watchlist:
             for domain_object in output:
-                extended_watchlist.write(f'{domain_object["domain-name"]}\n')
+                if domain_object["domain-name"] != netloc:
+                    extended_watchlist.write(f'{domain_object["domain-name"]}\n')
+
+def create_candidate(url: str):
+    url = urlparse(url)
+    netloc = url.netloc
+    call_dnstwist(netloc)
+    create_candidate_list()
 
 if __name__ == "__main__":
     url = sys.argv[1]
     url = urlparse(url)
     netloc = url.netloc
     call_dnstwist(netloc)
-    create_extended_watchlist()
+    create_candidate_list()

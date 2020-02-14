@@ -1,4 +1,5 @@
 beautifulsoup4==4.8.2
+censys==0.0.8
 certifi==2019.11.28
 chardet==3.0.4
 cssselect==1.1.0
@@ -7,9 +8,11 @@ filetype==1.0.5
 fire==0.2.1
 idna==2.8
 lxml==4.5.0
+netaddr==0.7.19
 parse==1.14.0
 pypiwin32==223
 pyquery==1.4.1
+python-dateutil==2.8.1
 python-magic==0.4.15
 pywebcopy==6.1.1
 pywin32==227

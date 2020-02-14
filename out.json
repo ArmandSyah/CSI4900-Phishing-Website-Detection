@@ -8,6 +8,20 @@
     },
     {
         "dns-a": [
+            "72.55.137.168"
+        ],
+        "dns-mx": [
+            "belle.ca"
+        ],
+        "dns-ns": [
+            "ns.cnsc.ca",
+            "ns2.cnsc.ca"
+        ],
+        "domain-name": "www.belle.ca",
+        "fuzzer": "addition"
+    },
+    {
+        "dns-a": [
             "72.52.10.14"
         ],
         "domain-name": "www.belll.ca",
@@ -143,433 +157,6 @@
     },
     {
         "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-p2s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "wwvv.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--yjgaa.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "vvww.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "vvvvw.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "www.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-d3s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-pt1a.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-z2s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "vvvvvv.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-btma.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-52s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "wvvvv.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-m4s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ekgaa.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-boaa.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-7sma.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-02s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-v2s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-9naa.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--9gaaa.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "184.168.221.53"
-        ],
-        "dns-mx": [
-            "lbell-ca.mail.protection.outlook.com"
-        ],
-        "dns-ns": [
-            "ns01.domaincontrol.com",
-            "ns02.domaincontrol.com"
-        ],
-        "domain-name": "www.lbell.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "wvvw.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-ot1a.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-c3s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-otma.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-ntma.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--wjgaa.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--qjgaa.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-gtma.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "108.178.42.82"
-        ],
-        "domain-name": "www.bcil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
             "192.185.54.177"
         ],
         "dns-mx": [
@@ -597,7 +184,18 @@
             "ns1.parklogic.com",
             "ns2.parklogic.com"
         ],
-        "domain-name": "xn--w-6msa.beil.ca",
+        "domain-name": "xn--w-boaa.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "184.168.221.57"
+        ],
+        "dns-ns": [
+            "ns29.domaincontrol.com",
+            "ns30.domaincontrol.com"
+        ],
+        "domain-name": "www.be11.ca",
         "fuzzer": "homoglyph"
     },
     {
@@ -611,7 +209,7 @@
             "ns1.parklogic.com",
             "ns2.parklogic.com"
         ],
-        "domain-name": "xn--w-6sma.beil.ca",
+        "domain-name": "xn--ww-e3s.beil.ca",
         "fuzzer": "homoglyph"
     },
     {
@@ -625,49 +223,7 @@
             "ns1.parklogic.com",
             "ns2.parklogic.com"
         ],
-        "domain-name": "xn--ww-bva.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-cva.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-72s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--qgjaa.beil.ca",
+        "domain-name": "xn--w-ktma.beil.ca",
         "fuzzer": "homoglyph"
     },
     {
@@ -695,21 +251,455 @@
             "ns1.parklogic.com",
             "ns2.parklogic.com"
         ],
-        "domain-name": "xn--ww-u2s.beil.ca",
+        "domain-name": "xn--ww-52s.beil.ca",
         "fuzzer": "homoglyph"
     },
     {
         "dns-a": [
-            "91.195.240.126"
+            "72.52.179.174"
         ],
         "dns-mx": [
-            "mail.pickelhost.com"
+            "mx156.hostedmxserver.com"
         ],
         "dns-ns": [
-            "ns1.sedoparking.com",
-            "ns2.sedoparking.com"
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
         ],
-        "domain-name": "www.deli.ca",
+        "domain-name": "xn--w-jtma.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--w-ftma.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--w-9naa.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--ww-bva.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--ww-c3s.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--w-6msa.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--ww-62s.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--yjgaa.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--ww-m4s.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--w-7msa.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--sjgaa.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--ww-p2s.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--w-iuma.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "vvvvw.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--ww-72s.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--ww-t2s.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--ww-02s.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--ww-ot1a.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--9gaaa.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--w-otma.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "wvvw.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "wwvv.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "199.34.228.100"
+        ],
+        "domain-name": "www.clell.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--w-6sma.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--ww-d3s.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--w-gtma.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--ww-nt1a.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--ww-9ua.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--ekgaa.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--w-juma.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "108.178.42.82"
+        ],
+        "domain-name": "www.bcil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--ww-z2s.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--ww-u2s.beil.ca",
         "fuzzer": "homoglyph"
     },
     {
@@ -738,70 +728,7 @@
             "ns1.parklogic.com",
             "ns2.parklogic.com"
         ],
-        "domain-name": "xn--sjgaa.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-e3s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-iuma.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "199.34.228.100"
-        ],
-        "domain-name": "www.clell.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-ctma.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-ktma.beil.ca",
+        "domain-name": "xn--ujgaa.beil.ca",
         "fuzzer": "homoglyph"
     },
     {
@@ -829,7 +756,21 @@
             "ns1.parklogic.com",
             "ns2.parklogic.com"
         ],
-        "domain-name": "xn--ww-nt1a.beil.ca",
+        "domain-name": "xn--ww-v2s.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "184.168.221.53"
+        ],
+        "dns-mx": [
+            "lbell-ca.mail.protection.outlook.com"
+        ],
+        "dns-ns": [
+            "ns01.domaincontrol.com",
+            "ns02.domaincontrol.com"
+        ],
+        "domain-name": "www.lbell.ca",
         "fuzzer": "homoglyph"
     },
     {
@@ -843,18 +784,7 @@
             "ns1.parklogic.com",
             "ns2.parklogic.com"
         ],
-        "domain-name": "xn--ww-62s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "184.168.221.33"
-        ],
-        "dns-ns": [
-            "ns29.domaincontrol.com",
-            "ns30.domaincontrol.com"
-        ],
-        "domain-name": "www.be11.ca",
+        "domain-name": "vvww.beil.ca",
         "fuzzer": "homoglyph"
     },
     {
@@ -868,35 +798,14 @@
             "ns1.parklogic.com",
             "ns2.parklogic.com"
         ],
-        "domain-name": "xn--ww-n2s.beil.ca",
+        "domain-name": "wvvvv.beil.ca",
         "fuzzer": "homoglyph"
     },
     {
         "dns-a": [
-            "72.52.179.174"
+            "199.59.242.153"
         ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-juma.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-12s.beil.ca",
+        "domain-name": "www.deli.ca",
         "fuzzer": "homoglyph"
     },
     {
@@ -924,7 +833,7 @@
             "ns1.parklogic.com",
             "ns2.parklogic.com"
         ],
-        "domain-name": "xn--w-ftma.beil.ca",
+        "domain-name": "xn--ww-cva.beil.ca",
         "fuzzer": "homoglyph"
     },
     {
@@ -938,7 +847,95 @@
             "ns1.parklogic.com",
             "ns2.parklogic.com"
         ],
-        "domain-name": "xn--w-7msa.beil.ca",
+        "domain-name": "xn--wjgaa.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--ww-12s.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "vvvvvv.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "domain-name": "xn--w-ctma.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--qjgaa.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "domain-name": "www.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--w-7sma.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "domain-name": "xn--qgjaa.beil.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "xn--w-ntma.beil.ca",
         "fuzzer": "homoglyph"
     },
     {
@@ -959,50 +956,26 @@
             "ns1.parklogic.com",
             "ns2.parklogic.com"
         ],
-        "domain-name": "xn--ujgaa.beil.ca",
+        "domain-name": "xn--ww-pt1a.beil.ca",
         "fuzzer": "homoglyph"
     },
     {
         "dns-a": [
-            "72.52.179.174"
+            "184.150.210.82",
+            "184.150.211.82"
         ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-t2s.beil.ca",
-        "fuzzer": "homoglyph"
+        "domain-name": "www3.bell.ca",
+        "fuzzer": "insertion"
     },
     {
         "dns-a": [
-            "72.52.179.174"
+            "74.208.236.43"
         ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
+        "dns-aaaa": [
+            "2607:f1c0:100f:f000::266"
         ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-9ua.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-jtma.beil.ca",
-        "fuzzer": "homoglyph"
+        "domain-name": "www.nbell.ca",
+        "fuzzer": "insertion"
     },
     {
         "dns-a": [
@@ -1020,28 +993,17 @@
     },
     {
         "dns-a": [
-            "64.98.145.30"
+            "158.85.87.76"
         ],
-        "domain-name": "www.bdell.ca",
-        "fuzzer": "insertion"
-    },
-    {
-        "dns-a": [
-            "74.208.236.43"
+        "dns-mx": [
+            "mail.bll.ca"
         ],
-        "dns-aaaa": [
-            "2607:f1c0:100f:f000::266"
+        "dns-ns": [
+            "slns1.namespro.ca",
+            "slns2.namespro.ca"
         ],
-        "domain-name": "www.nbell.ca",
-        "fuzzer": "insertion"
-    },
-    {
-        "dns-a": [
-            "184.150.210.82",
-            "184.150.211.82"
-        ],
-        "domain-name": "www3.bell.ca",
-        "fuzzer": "insertion"
+        "domain-name": "www.bll.ca",
+        "fuzzer": "omission"
     },
     {
         "dns-a": [
@@ -1059,20 +1021,6 @@
     },
     {
         "dns-a": [
-            "158.85.87.76"
-        ],
-        "dns-mx": [
-            "mail.bll.ca"
-        ],
-        "dns-ns": [
-            "slns1.namespro.ca",
-            "slns2.namespro.ca"
-        ],
-        "domain-name": "www.bll.ca",
-        "fuzzer": "omission"
-    },
-    {
-        "dns-a": [
             "35.186.238.101"
         ],
         "dns-ns": [
@@ -1084,14 +1032,21 @@
     },
     {
         "dns-a": [
-            "199.59.242.153"
+            "103.224.182.249"
         ],
-        "domain-name": "www.bwll.ca",
+        "dns-mx": [
+            "park-mx.above.com"
+        ],
+        "dns-ns": [
+            "ns1.above.com",
+            "ns2.above.com"
+        ],
+        "domain-name": "www.belk.ca",
         "fuzzer": "replacement"
     },
     {
         "dns-a": [
-            "50.63.202.50"
+            "184.168.221.52"
         ],
         "dns-ns": [
             "ns75.domaincontrol.com",
@@ -1102,7 +1057,14 @@
     },
     {
         "dns-a": [
-            "184.168.221.61"
+            "17.146.233.10"
+        ],
+        "domain-name": "www.nell.ca",
+        "fuzzer": "replacement"
+    },
+    {
+        "dns-a": [
+            "50.63.202.37"
         ],
         "dns-ns": [
             "ns09.domaincontrol.com",
@@ -1113,9 +1075,16 @@
     },
     {
         "dns-a": [
-            "17.146.233.10"
+            "199.59.242.153"
         ],
-        "domain-name": "www.nell.ca",
+        "domain-name": "www.vell.ca",
+        "fuzzer": "replacement"
+    },
+    {
+        "dns-a": [
+            "199.59.242.153"
+        ],
+        "domain-name": "www.bwll.ca",
         "fuzzer": "replacement"
     },
     {
@@ -1134,24 +1103,10 @@
     },
     {
         "dns-a": [
-            "103.224.182.249"
+            "72.55.137.168"
         ],
-        "dns-mx": [
-            "park-mx.above.com"
-        ],
-        "dns-ns": [
-            "ns1.above.com",
-            "ns2.above.com"
-        ],
-        "domain-name": "www.belk.ca",
-        "fuzzer": "replacement"
-    },
-    {
-        "dns-a": [
-            "199.59.242.153"
-        ],
-        "domain-name": "www.vell.ca",
-        "fuzzer": "replacement"
+        "domain-name": "www.be.ll.ca",
+        "fuzzer": "subdomain"
     },
     {
         "dns-a": [

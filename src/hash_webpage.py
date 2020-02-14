@@ -8,7 +8,6 @@ from create_db import Session, Web_Assets
 from pywebcopy import WebPage, config, save_webpage
 from urllib.parse import urlparse
 
-session = Session()
 
 def download_webpage(url: str):        
     parsed_url = urlparse(url)
@@ -21,7 +20,7 @@ def download_webpage(url: str):
     print('finish extracting assets')
     return netloc
 
-def hash_assets(netloc: str):
+def hash_assets(netloc, session):
     print("Retrieving hash hexdigest of content")
     print(os.getcwd())
     print(os.path.join(os.getcwd(), netloc))
@@ -39,14 +38,17 @@ def hash_assets(netloc: str):
             print('Asset added')
     session.commit()
 
-# id, netloc, hash hexdigest, file_name, file extension 
+def hash_webpage(url: str):
+    session = Session()
+    netloc = download_webpage(url)
+    hash_assets(netloc, session)
+    session.close()
 
 if __name__ == "__main__":
-    # print(os.path.exists('.\\webpage_assets\\CSI4900\\www.bell.ca'))
-    print(os.getcwd())
+    session = Session()
     url = sys.argv[1]
     netloc = download_webpage(url)
-    hash_assets(netloc)
+    hash_assets(netloc, session)
     session.close()
 
 
