@@ -19,10 +19,11 @@ Follow the instructions found in this website: https://www.sitepoint.com/docker-
 1. Install all the required packages by typing 'pip install -r requirements.txt'. This recursively reads the contents of requirements.txt and installs each package per line
 1. (Optional) - In the config.json file, if you have a censys.io account, feel free to include your api and secret key in the fields provided
 
-`````{
+```
+{
     "censys_UID": "<Your API key>",
     "censys_Secret": "<Your Secret Key>"
-}````
-`````
+}
+```
 
 3. Now you can run the main.py script, which will carry out the steps currently implemented in the phishing website detection loop. Do so by calling the script as followed: 'python main.py <full url of legitiment site that can be targeted by phishing>' (python main.py https://www.bell.ca/)
