@@ -26,4 +26,4 @@ Follow the instructions found in this website: https://www.sitepoint.com/docker-
 }
 ```
 
-3. Now you can run the main.py script, which will carry out the steps currently implemented in the phishing website detection loop. Do so by calling the script as followed: 'python main.py <full url of legitiment site that can be targeted by phishing>' (python main.py https://www.bell.ca/)
+3. Now you can run the main.py script, which will carry out the steps currently implemented in the phishing website detection loop. Do so by calling the script as followed: `python main.py <full url of legitiment site that can be targeted by phishing>` (python main.py https://www.bell.ca/)
