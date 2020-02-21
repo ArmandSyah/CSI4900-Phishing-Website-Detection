@@ -17,11 +17,13 @@ python-magic==0.4.15
 pywebcopy==6.1.1
 pywin32==227
 requests==2.22.0
+requests-file==1.4.3
 rope==0.16.0
 six==1.14.0
 soupsieve==1.9.5
 SQLAlchemy==1.3.13
 termcolor==1.1.0
+tldextract==2.2.2
 urllib3==1.25.8
 w3lib==1.21.0
 websocket-client==0.57.0
