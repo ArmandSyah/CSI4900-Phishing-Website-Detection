@@ -34,7 +34,10 @@ def search_crtsh(domain):
 def search_censys(domain, censys_uid, censys_secret):
     c = censys.certificates.CensysCertificates(api_id=censys_uid, api_secret=censys_secret)
     certs = c.search(f'{domain} and tags.raw: "unexpired"')
-    return len(list(certs)) > 0
+    if (len(list(certs)) > 0):
+        print(f'Found unexpired certificate in domain: {domain}')
+        return True 
+    return False
 
 def create_cert_list():
     with open('config.json', 'r')  as config:
@@ -52,3 +55,5 @@ def create_cert_list():
             if result:
                 cert_list.write(f'{candidate_domain}')
     
+if __name__ == "__main__":
+    create_cert_list()

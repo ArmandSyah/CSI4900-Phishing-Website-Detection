@@ -1,4 +1,5 @@
 {
   "censys_UID": "",
-  "censys_Secret": ""
+  "censys_Secret": "",
+  "shodan_key": ""
 }
