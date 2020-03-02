@@ -132,3 +132,4 @@ dmypy.json
 *.sqlite
 .vscode
 /webpage_assets
+output.txt
