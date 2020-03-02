@@ -13,6 +13,32 @@
 
 Follow the instructions found in this website: https://www.sitepoint.com/docker-windows-10-home/. (You can skip the part with the node application at the end)
 
+### Install the Docker Containers needed to run the scripts
+
+Start your Docker VM: `docker-machine start <name of your docker vm>`
+
+
+Run the following command:
+
+```
+docker-machine env --shell cmd <name of your docker vm> 
+@FOR /f "tokens=*" %i IN ('docker-machine env --shell cmd <name of your docker vm>') DO @%i
+```
+
+This will ensure Docker will run on Windows
+
+#### Get the DNSTwist Docker Container
+
+Pull the dnstwist container using this command while docker vm is running: `docker pull elceef/dnstwist`
+
+#### Get the httprobe Docker Container
+
+Clone the httprobe repo: `git clone https://github.com/tomnomnom/httprobe.git`
+
+cd into the cloned httprobe repo
+
+Build the httprobe container using this command while docker vm is running: `docker build -t httprobe .`
+
 ### Running the scripts
 
 0. Ensure you are in the project directory and you have the Docker machine set up and currently running
