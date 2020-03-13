@@ -2,6 +2,7 @@ import sys
 import os
 import hashlib
 import filetype
+import shutil
 
 from create_db import Session, Web_Assets
 
@@ -17,6 +18,16 @@ def download_webpage(url: str):
     # download website page assets
     kwargs = {'bypass_robots': False, 'over_write': True, 'project_name': 'CSI4900'}
     save_webpage(url, './webpage_assets', **kwargs)
+
+    file_gen_obj = os.walk('./')
+    print('File gen: ', file_gen_obj)
+    dirlist =  next(file_gen_obj)[1]
+    print(dirlist)
+
+    for folder in dirlist:
+        if folder != netloc:
+            shutil.rmtree(os.path.join('./', folder))
+
     print('finish extracting assets')
     return netloc
 
