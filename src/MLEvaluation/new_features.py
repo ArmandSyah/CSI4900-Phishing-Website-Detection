@@ -30,7 +30,7 @@ class NewFeatures:
         self.keyword_in_url = keyword in unknown_url
         self.keyword_in_domain = check_keyword_in_domain(target_url, unknown_url)
         self.num_similar_images = check_num_similar_images(target_url, unknown_url)
-        self.num_similar_html_frags = None
+        self.num_similar_html_frags = check_num_similar_html_frags(target_url, unknown_url)
         self.cert_auth = check_cert_auth(unknown_url)
 
 def check_keyword_in_domain(keyword: str, unknown_url: str):

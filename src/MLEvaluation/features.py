@@ -1,6 +1,7 @@
 from urllib.parse import urlparse, parse_qs
 from collections import Counter
 from math import log, e
+from src.MLEvaluation.new_features import NewFeatures
 
 import numpy as np
 
@@ -11,13 +12,14 @@ url_delimiters = ['.', ',', '/', '=', '-', '_']
 # MAIN Feature Set
 
 class WebsiteInfo:
-    def __init__(self, target_url: str, unknown_url: str, is_legit: int = -1):
+    def __init__(self, target_url: str, unknown_url: str, keyword: str, is_legit: int = -1):
         parsed_url = urlparse(unknown_url.lower())
         self.url = URLpart(parsed_url)
         self.domain = DomainPart(parsed_url.netloc)
         self.path = PathPart(parsed_url.path)
         self.query = QueryPart(parse_qs(parsed_url.query), parsed_url.query)
         self.fragment = FragmentPart(parsed_url.fragment, len(unknown_url))
+        self.new_features = NewFeatures(target_url, unknown_url, keyword)
         self.is_legit = is_legit
 
 # Calculating each feature
