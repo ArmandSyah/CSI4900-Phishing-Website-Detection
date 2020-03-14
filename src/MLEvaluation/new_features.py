@@ -84,8 +84,6 @@ def check_num_similar_images(target_url: str, unknown_url: str):
 
     return matching_images / len(target_image_hashes)
 
-
-# 
 def check_num_similar_html_frags(target_url: str, unknown_url: str):
     matching_html_fragments = 0
 
