@@ -4,6 +4,8 @@ from math import log, e
 from src.MLEvaluation.new_features import NewFeatures
 
 import numpy as np
+import string
+import re
 
 well_known_ports = [1, 5, 7, 18, 20, 21, 22, 23, 25, 29, 37, 42, 43, 49, 53, 69, 70, 79, 80, 103, 108, 109, 110, 115,
 118, 119, 137, 193, 143, 150, 156, 161, 179, 190, 194, 197, 389, 396, 443, 444, 445, 458, 546, 547, 563, 569, 1080]
@@ -29,6 +31,8 @@ class WebsiteInfo:
         url_features = {}
         for k, v in vars(self).items():
             if isinstance(v, int):
+                url_features[k] = v
+            elif isinstance(v, str):
                 url_features[k] = v
             else:
                 for key, value in vars(v).items():

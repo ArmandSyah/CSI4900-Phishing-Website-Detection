@@ -1,0 +1,5 @@
+https://www.phishtank.com/add_web_phish.php
+https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html
+https://scikit-learn.org/stable/install.html
+https://www.reddit.com/r/all/
+https://github.com/rajatomar788/pywebcopy/

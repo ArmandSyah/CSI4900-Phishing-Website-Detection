@@ -4,7 +4,7 @@ import hashlib
 import filetype
 import shutil
 
-from create_db import Session, Web_Assets
+from src.create_db import Session, Web_Assets
 
 from pywebcopy import WebPage, config, save_webpage
 from urllib.parse import urlparse
@@ -16,13 +16,11 @@ def download_webpage(url: str):
     print('netloc: ' + netloc)
 
     # download website page assets
-    kwargs = {'bypass_robots': False, 'over_write': True, 'project_name': 'CSI4900'}
+    kwargs = {'bypass_robots': True, 'over_write': True, 'project_name': 'CSI4900'}
     save_webpage(url, './webpage_assets', **kwargs)
 
     file_gen_obj = os.walk('./')
-    print('File gen: ', file_gen_obj)
     dirlist =  next(file_gen_obj)[1]
-    print(dirlist)
 
     for folder in dirlist:
         if folder != netloc:

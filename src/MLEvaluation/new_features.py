@@ -23,14 +23,16 @@ class NewFeatures:
     def __init__(self, target_url: str, unknown_url: str, keyword: str):
         parsed_unknown_url = urlparse(unknown_url)
         unknown_netloc = parsed_unknown_url.netloc
-        # download website page assets
-        kwargs = {'bypass_robots': False, 'over_write': True, 'project_name': 'CSI4900'}
-        save_webpage(unknown_url, './webpage_assets', **kwargs)
+        # # download website page assets
+        # kwargs = {'bypass_robots': True, 'over_write': True, 'project_name': 'CSI4900'}
+        # save_webpage(unknown_url, './webpage_assets', **kwargs)
+
+        # print('Finished Saving Unknown URL assets')
 
         self.keyword_in_url = keyword in unknown_url
         self.keyword_in_domain = check_keyword_in_domain(target_url, unknown_url)
-        self.num_similar_images = check_num_similar_images(target_url, unknown_url)
-        self.num_similar_html_frags = check_num_similar_html_frags(target_url, unknown_url)
+        # self.num_similar_images = check_num_similar_images(target_url, unknown_url)
+        # self.num_similar_html_frags = check_num_similar_html_frags(target_url, unknown_url)
         self.cert_auth = check_cert_auth(unknown_url)
 
 def check_keyword_in_domain(keyword: str, unknown_url: str):
@@ -49,17 +51,6 @@ def check_num_similar_images(target_url: str, unknown_url: str):
 
     parsed_unknown_url = urlparse(unknown_url)
     unknown_netloc = parsed_unknown_url.netloc
-
-    # download website page assets
-    kwargs = {'bypass_robots': False, 'over_write': True, 'project_name': 'CSI4900'}
-    save_webpage(unknown_url, './webpage_assets', **kwargs)
-
-    file_gen_obj = os.walk('./')
-    dirlist =  next(file_gen_obj)[1]
-
-    for folder in dirlist:
-        if folder != unknown_netloc:
-            shutil.rmtree(os.path.join('./', folder))
     
     for root, dirs, files in os.walk(os.path.join('./', unknown_netloc)):
         for f in files:
@@ -85,7 +76,7 @@ def check_num_similar_images(target_url: str, unknown_url: str):
     return matching_images / len(target_image_hashes)
 
 def check_num_similar_html_frags(target_url: str, unknown_url: str):
-    matching_html_fragments = 0
+    match_ratios = []
 
     target_html_fragments = set()
     unknown_html_fragments = set()
@@ -118,36 +109,46 @@ def check_num_similar_html_frags(target_url: str, unknown_url: str):
     for target in target_html_fragments:
         for unknown in unknown_html_fragments:
             match_ratio = SequenceMatcher(None, target, unknown).ratio()
-            matching_html_fragments = (matching_html_fragments + 1) if match_ratio >= threshold_ratio else matching_html_fragments
+            match_ratios.append(match_ratio)
 
-    return matching_html_fragments / len(target_html_fragments)
+    return sum(match_ratios) / len(match_ratios)
 
 # https://gist.github.com/gdamjan/55a8b9eec6cf7b771f92021d93b87b2c
 def check_cert_auth(unknown_url: str):
-    parsed_unknown_url = urlparse(unknown_url)
-    unknown_netloc = parsed_unknown_url.netloc
-    port = parsed_unknown_url.port
-
-    hostname_idna = idna.encode(unknown_netloc)
-    sock = socket()
-
-    sock.connect((unknown_netloc, port))
-    ctx = SSL.Context(SSL.SSLv23_METHOD) # most compatible
-    ctx.check_hostname = False
-    ctx.verify_mode = SSL.VERIFY_NONE
-
-    sock_ssl = SSL.Connection(ctx, sock)
-    sock_ssl.set_connect_state()
-    sock_ssl.set_tlsext_host_name(hostname_idna)
-    sock_ssl.do_handshake()
-    cert = sock_ssl.get_peer_certificate()
-    crypto_cert = cert.to_cryptography()
-    sock_ssl.close()
-    sock.close()
-
     try:
-        names = cert.issuer.get_attributes_for_oid(NameOID.COMMON_NAME)
-        return names[0].value
-    except x509.ExtensionNotFound:
+        parsed_unknown_url = urlparse(unknown_url)
+        unknown_netloc = parsed_unknown_url.netloc
+        port = parsed_unknown_url.port
+
+        if port is None:
+            port = 443 if parsed_unknown_url.scheme == 'https' else 80
+
+        hostname_idna = idna.encode(unknown_netloc)
+        sock = socket()
+
+        sock.connect((unknown_netloc, port))
+        ctx = SSL.Context(SSL.SSLv23_METHOD) # most compatible
+        ctx.check_hostname = False
+        ctx.verify_mode = SSL.VERIFY_NONE
+
+        sock_ssl = SSL.Connection(ctx, sock)
+        sock_ssl.set_connect_state()
+        sock_ssl.set_tlsext_host_name(hostname_idna)
+        sock_ssl.do_handshake()
+        cert = sock_ssl.get_peer_certificate()
+        crypto_cert = cert.to_cryptography()
+        sock_ssl.close()
+        sock.close()
+
+        try:
+            import pprint
+            pprint.pprint(crypto_cert.issuer.get_attributes_for_oid(NameOID.COMMON_NAME))
+            names = crypto_cert.issuer.get_attributes_for_oid(NameOID.COMMON_NAME)
+            return names[0].value
+        except x509.ExtensionNotFound:
+            print('Could not retrieve cert issuer')
+            return None
+    except:
+        print('Could not retrieve cert issuer')
         return None
 
