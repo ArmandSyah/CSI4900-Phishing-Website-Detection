@@ -11,27 +11,34 @@ from sklearn.feature_selection import SelectKBest, chi2
 from sklearn.model_selection import KFold, train_test_split
 from sklearn import metrics
 
+from src.MLEvaluation.features import WebsiteInfo
+
 def build_model():
     # Set up MongoDB connection
     client = MongoClient('localhost', 27017)
-    db = client['url_training_data']
-    urls = db.urls
+    db = client['phishing_training_data']
+    websites = db.websites
 
-    df = pd.DataFrame(list(urls.find()))
+    df = pd.DataFrame(list(websites.find()))
 
     df = df.sample(frac=1)  # shuffle the rows
 
     one_hot_protocol = pd.get_dummies(df['protocol'], columns=['protocol'])
+    df = pd.concat([df, one_hot_protocol], axis=1)
+    one_hot_protocol = pd.get_dummies(df['cert_auth'], columns=['cert_auth'])
     df = pd.concat([df, one_hot_protocol], axis=1)
     feature_columns = list(df.columns)
     feature_columns.remove('is_legit')
     feature_columns.remove('_id')
     feature_columns.remove('protocol')
     feature_columns.remove('url')
-    feature_columns.remove('domain')
     feature_columns.remove('path')
     feature_columns.remove('query')
     feature_columns.remove('fragment')
+    feature_columns.remove('cert_auth')
+    feature_columns.remove('target_url')
+    feature_columns.remove('unknown_url')
+    feature_columns.remove('keyword')
 
     features = df[feature_columns]
     target_variable = df.is_legit
@@ -41,15 +48,10 @@ def build_model():
     rf.predict_test_set()
 
     print('Pickling random forest')
-    with open('models\\random_forest.pkl', 'wb') as random_forest_output:
+    with open(os.path.join(os.getcwd(), 'models\\random_forest.pkl'), 'wb') as random_forest_output:
         pickle.dump(rf, random_forest_output, pickle.HIGHEST_PROTOCOL)
     
     client.close()
-
-class RandomForest(ClassificationModel):
-    def __init__(self, features, feature_columns, target_variable):
-        clf = RandomForestClassifier(n_estimators=100)
-        super().__init__(features, feature_columns, target_variable, clf)
 
 class ClassificationModel:
     def __init__(self, features, feature_columns, target_variables, classifier):
@@ -84,8 +86,8 @@ class ClassificationModel:
             f"\nTrain Label Count Actual:\n{self.target_train.value_counts()}")
         print(f"\nTest Label Count Actual:\n{self.target_test.value_counts()}")
 
-    def predict_url(self, url: str):
-        u = URL(url).to_json()
+    def predict_url(self, target_url: str, url: str, keyword: str):
+        u = WebsiteInfo(url).to_json()
         url_df = pd.DataFrame.from_records([u])
         url_df['http'] = 1 if url_df.iloc[0]['protocol'] == 'http' else 0
         url_df['https'] = 1 if url_df.iloc[0]['protocol'] == 'https' else 0
@@ -95,10 +97,18 @@ class ClassificationModel:
         print(f'Predictions for {url}: {target_prediction[0]}')
         return (u, target_prediction[0], np.max(class_probabilities))
 
-    def fit_classifier(self, url: str, label):
-        u = URL(url).to_json()
+    def fit_classifier(self, target_url: str, url: str,  keyword: str, label):
+        u = WebsiteInfo(url).to_json()
         url_df = pd.DataFrame.from_records([u])
         url_df['http'] = 1 if url_df.iloc[0]['protocol'] == 'http' else 0
         url_df['https'] = 1 if url_df.iloc[0]['protocol'] == 'https' else 0
         url_features = url_df[self.feature_columns]
         self.clf.fit(url_features, [label])
+
+class RandomForest(ClassificationModel):
+    def __init__(self, features, feature_columns, target_variable):
+        clf = RandomForestClassifier(n_estimators=100)
+        super().__init__(features, feature_columns, target_variable, clf)
+
+if __name__ == "__main__":
+    build_model()
