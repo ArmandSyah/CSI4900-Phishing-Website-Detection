@@ -133,3 +133,4 @@ dmypy.json
 .vscode
 /webpage_assets
 output.txt
+/saved_assets

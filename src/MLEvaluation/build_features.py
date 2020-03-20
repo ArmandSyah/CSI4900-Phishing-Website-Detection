@@ -4,15 +4,15 @@ import os
 from pymongo import MongoClient
 from src.hash_webpage import download_webpage
 from src.MLEvaluation.features import WebsiteInfo
+from src.MLEvaluation.helper_functions import save_images, save_local_html_copy
 
 def build_features(target_url, keyword, phish_file, legit_file):
-    # original_working_directory = os.getcwd()
-    # download_webpage(target_url)
-    # os.chdir(original_working_directory)
-
     client = MongoClient('localhost', 27017)
     db = client['phishing_training_data']
     websites = db.websites
+
+    save_local_html_copy(target_url)
+    save_images(target_url)
 
     phish_url_data = os.path.join(os.getcwd(), phish_file)
     legit_url_data = os.path.join(os.getcwd(), legit_file)

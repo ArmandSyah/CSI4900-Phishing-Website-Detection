@@ -16,23 +16,26 @@ from socket import socket
 from difflib import SequenceMatcher
 from bs4 import BeautifulSoup
 
+from src.MLEvaluation.helper_functions import save_images, save_local_html_copy
+from html_similarity import similarity
+
+import os
+
 img_ext = ['jpg', 'jpx', 'png', 'gif', 'webp', 'cr2', 'tif', 'bmp', 'jxr', 'psd', 'ico', 'heic']
 threshold_ratio = .6
 
 class NewFeatures:
     def __init__(self, target_url: str, unknown_url: str, keyword: str):
+        save_local_html_copy(unknown_url)
+        save_images(unknown_url)
+
         parsed_unknown_url = urlparse(unknown_url)
         unknown_netloc = parsed_unknown_url.netloc
-        # # download website page assets
-        # kwargs = {'bypass_robots': True, 'over_write': True, 'project_name': 'CSI4900'}
-        # save_webpage(unknown_url, './webpage_assets', **kwargs)
-
-        # print('Finished Saving Unknown URL assets')
 
         self.keyword_in_url = keyword in unknown_url
         self.keyword_in_domain = check_keyword_in_domain(target_url, unknown_url)
-        # self.num_similar_images = check_num_similar_images(target_url, unknown_url)
-        # self.num_similar_html_frags = check_num_similar_html_frags(target_url, unknown_url)
+        self.num_similar_images = check_num_similar_images(target_url, unknown_url)
+        self.num_similar_html_frags = check_num_similar_html_frags(target_url, unknown_url)
         self.cert_auth = check_cert_auth(unknown_url)
 
 def check_keyword_in_domain(keyword: str, unknown_url: str):
@@ -51,19 +54,24 @@ def check_num_similar_images(target_url: str, unknown_url: str):
 
     parsed_unknown_url = urlparse(unknown_url)
     unknown_netloc = parsed_unknown_url.netloc
+
+    if not os.path.exists(f"saved_assets\{unknown_netloc}_images\\"):
+        return 0
     
-    for root, dirs, files in os.walk(os.path.join('./', unknown_netloc)):
+    for root, dirs, files in os.walk(os.path.join('.\\', f"saved_assets\{unknown_netloc}_images\\")):
         for f in files:
             f_name = os.path.join(root, f)
+            print(f_name)
             f_guess = filetype.guess(f_name)
             f_ext_type = None if f_guess is None else f_guess.extension
             if f_ext_type in img_ext:
                 image = Image.open(f_name)
                 unknown_url_image_hashes.add(imagehash.average_hash(image))
 
-    for root, dirs, files in os.walk(os.path.join('./', target_netloc)):
+    for root, dirs, files in os.walk(os.path.join('.\\', f"saved_assets\{target_netloc}_images\\")):
         for f in files:
             f_name = os.path.join(root, f)
+            print(f_name)
             f_guess = filetype.guess(f_name)
             f_ext_type = None if f_guess is None else f_guess.extension
             if f_ext_type in img_ext:
@@ -75,43 +83,26 @@ def check_num_similar_images(target_url: str, unknown_url: str):
 
     return matching_images / len(target_image_hashes)
 
-def check_num_similar_html_frags(target_url: str, unknown_url: str):
-    match_ratios = []
-
-    target_html_fragments = set()
-    unknown_html_fragments = set()
-
+def check_num_similar_html_frags(target_url: str, unknown_url: str):    
     parsed_target_url = urlparse(target_url)
     target_netloc = parsed_target_url.netloc
 
     parsed_unknown_url = urlparse(unknown_url)
     unknown_netloc = parsed_unknown_url.netloc
 
-    for root, dirs, files in os.walk(os.path.join('./', unknown_netloc)):
-        for f in files:
-            f_name = os.path.join(root, f)
-            f_guess = filetype.guess(f_name)
-            f_ext_type = None if f_guess is None else f_guess.extension
-            if f_ext_type == "html":
-                soup = BeautifulSoup(open(f_name), "html.parser")
-                unknown_html_fragments.add(str(soup))
+    if not os.path.exists(f"saved_assets\{unknown_netloc}.html"):
+        return 0
 
+    # Reading target html
+    with open(f'saved_assets\{target_netloc}.html', 'r', encoding="utf8") as f:
+        target_html = f.read()
+    
+    with open(f'saved_assets\{unknown_netloc}.html', 'r', encoding="utf8") as f:
+        unknown_html = f.read()
 
-    for root, dirs, files in os.walk(os.path.join('./', target_netloc)):
-        for f in files:
-            f_name = os.path.join(root, f)
-            f_guess = filetype.guess(f_name)
-            f_ext_type = None if f_guess is None else f_guess.extension
-            if f_ext_type == "html":
-                soup = BeautifulSoup(open(f_name), "html.parser")
-                target_html_fragments.add(str(soup))
+    return similarity(target_html, unknown_html)
 
-    for target in target_html_fragments:
-        for unknown in unknown_html_fragments:
-            match_ratio = SequenceMatcher(None, target, unknown).ratio()
-            match_ratios.append(match_ratio)
-
-    return sum(match_ratios) / len(match_ratios)
+    
 
 # https://gist.github.com/gdamjan/55a8b9eec6cf7b771f92021d93b87b2c
 def check_cert_auth(unknown_url: str):
@@ -141,8 +132,6 @@ def check_cert_auth(unknown_url: str):
         sock.close()
 
         try:
-            import pprint
-            pprint.pprint(crypto_cert.issuer.get_attributes_for_oid(NameOID.COMMON_NAME))
             names = crypto_cert.issuer.get_attributes_for_oid(NameOID.COMMON_NAME)
             return names[0].value
         except x509.ExtensionNotFound:

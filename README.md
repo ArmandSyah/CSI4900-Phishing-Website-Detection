@@ -17,11 +17,10 @@ Follow the instructions found in this website: https://www.sitepoint.com/docker-
 
 Start your Docker VM: `docker-machine start <name of your docker vm>`
 
-
 Run the following command:
 
 ```
-docker-machine env --shell cmd <name of your docker vm> 
+docker-machine env --shell cmd <name of your docker vm>
 @FOR /f "tokens=*" %i IN ('docker-machine env --shell cmd <name of your docker vm>') DO @%i
 ```
 
@@ -53,3 +52,5 @@ Build the httprobe container using this command while docker vm is running: `doc
 ```
 
 3. Now you can run the main.py script, which will carry out the steps currently implemented in the phishing website detection loop. Do so by calling the script as followed: `python main.py <full url of legitiment site that can be targeted by phishing>` (python main.py https://www.bell.ca/)
+
+To Run MLEvlauation: python src\MLEvaluation\build_features.py https://www.paypal.com/ca/signin paypal phishing_sites\paypal.txt phishing_sites\legit_urls.txt
