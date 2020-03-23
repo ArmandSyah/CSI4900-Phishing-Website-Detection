@@ -86,20 +86,26 @@ class ClassificationModel:
             f"\nTrain Label Count Actual:\n{self.target_train.value_counts()}")
         print(f"\nTest Label Count Actual:\n{self.target_test.value_counts()}")
 
-    def predict_url(self, target_url: str, url: str, keyword: str):
-        u = WebsiteInfo(url).to_json()
+    def predict_url(self, url: str, keyword: str):
+        u = WebsiteInfo(url, keyword).to_json()
         url_df = pd.DataFrame.from_records([u])
-        url_df['http'] = 1 if url_df.iloc[0]['protocol'] == 'http' else 0
-        url_df['https'] = 1 if url_df.iloc[0]['protocol'] == 'https' else 0
+        one_hot_protocol = pd.get_dummies(url_df['protocol'], columns=['protocol'])
+        url_df = pd.concat([url_df, one_hot_protocol], axis=1)
+        one_hot_protocol = pd.get_dummies(url_df['cert_auth'], columns=['cert_auth'])
+        url_df = pd.concat([url_df, one_hot_protocol], axis=1)
         url_features = url_df[self.feature_columns]
         target_prediction = self.clf.predict(url_features)
         class_probabilities = self.clf.predict_proba(url_features)
         print(f'Predictions for {url}: {target_prediction[0]}')
         return (u, target_prediction[0], np.max(class_probabilities))
 
-    def fit_classifier(self, target_url: str, url: str,  keyword: str, label):
-        u = WebsiteInfo(url).to_json()
+    def fit_classifier(self, url: str,  keyword: str, label):
+        u = WebsiteInfo(url, keyword).to_json()
         url_df = pd.DataFrame.from_records([u])
+        one_hot_protocol = pd.get_dummies(url_df['protocol'], columns=['protocol'])
+        url_df = pd.concat([url_df, one_hot_protocol], axis=1)
+        one_hot_protocol = pd.get_dummies(url_df['cert_auth'], columns=['cert_auth'])
+        url_df = pd.concat([url_df, one_hot_protocol], axis=1)
         url_df['http'] = 1 if url_df.iloc[0]['protocol'] == 'http' else 0
         url_df['https'] = 1 if url_df.iloc[0]['protocol'] == 'https' else 0
         url_features = url_df[self.feature_columns]

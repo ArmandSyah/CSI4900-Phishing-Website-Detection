@@ -14,17 +14,16 @@ url_delimiters = ['.', ',', '/', '=', '-', '_']
 # MAIN Feature Set
 
 class WebsiteInfo:
-    def __init__(self, target_url: str, unknown_url: str, keyword: str, is_legit: int = -1):
-        parsed_url = urlparse(unknown_url.lower())
-        self.target_url = target_url
-        self.unknown_url = unknown_url
+    def __init__(self, url: str, keyword: str, is_legit: int = -1):
+        parsed_url = urlparse(url.lower())
+        self.unknown_url = url
         self.keyword = keyword
         self.url = URLpart(parsed_url)
         self.domain = DomainPart(parsed_url.netloc)
         self.path = PathPart(parsed_url.path)
         self.query = QueryPart(parse_qs(parsed_url.query), parsed_url.query)
-        self.fragment = FragmentPart(parsed_url.fragment, len(unknown_url))
-        self.new_features = NewFeatures(target_url, unknown_url, keyword)
+        self.fragment = FragmentPart(parsed_url.fragment, len(url))
+        self.new_features = NewFeatures(url, keyword)
         self.is_legit = is_legit
     
     def to_json(self):

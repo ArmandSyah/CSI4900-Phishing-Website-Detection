@@ -2,59 +2,44 @@ import sys
 import os
 
 from pymongo import MongoClient
-from src.hash_webpage import download_webpage
 from src.MLEvaluation.features import WebsiteInfo
-from src.MLEvaluation.helper_functions import save_images, save_local_html_copy
 
-def build_features(target_url, keyword, phish_file, legit_file):
+def build_features(keyword, url_file, is_legit):
     client = MongoClient('localhost', 27017)
     db = client['phishing_training_data']
     websites = db.websites
 
-    save_local_html_copy(target_url)
-    save_images(target_url)
+    url_data = os.path.join(os.getcwd(), url_file)
 
-    phish_url_data = os.path.join(os.getcwd(), phish_file)
-    legit_url_data = os.path.join(os.getcwd(), legit_file)
+    urls = []
+    with open(url_data, 'r', encoding='utf8') as l:
+        urls = l.readlines()
 
-    print(phish_url_data)
-    print(legit_url_data)
-
-    phish_urls = []
-    with open(phish_url_data, 'r', encoding='utf8') as p:
-        phish_urls = p.readlines()
-
-    phish_urls = [url.strip() for url in phish_urls]
-    print(phish_urls)
-
-    legit_urls = []
-    with open(legit_url_data, 'r', encoding='utf8') as l:
-        legit_urls = l.readlines()
-
-    legit_urls = [url.strip() for url in legit_urls]
-    print(legit_urls)
+    urls = [url.strip() for url in urls]
 
     # iterate through urls, making url objects
     print('setting up urls')
-    phish_website_info_objs = []
-    legit_website_info_objs = []
+    url_objs = []
 
-    for phish_url in phish_urls:
-        print(phish_url)
-        phish_website_info_objs.append(WebsiteInfo(target_url, phish_url, keyword, 1).to_json())
-
-    for legit_url in legit_urls:
-        print(legit_url)
-        legit_website_info_objs.append(WebsiteInfo(target_url, legit_url, keyword, 0).to_json())
-
-    url_objs = phish_website_info_objs + legit_website_info_objs
+    for url in urls:
+        print(url)
+        url_objs.append(WebsiteInfo(url, keyword, is_legit).to_json())
 
     # bulk save them into mongodb databases
     print('inserting urls')
     new_result = websites.insert_many(url_objs)
 
+def delete_urls():
+    client = MongoClient('localhost', 27017)
+    db = client['phishing_training_data']
+    websites = db.websites
+    websites.drop()
+
 
 if __name__ == "__main__":
     arguments = sys.argv
-    target_url, keyword, phish_file, legit_file = arguments[1], arguments[2], arguments[3], arguments[4]
-    build_features(target_url, keyword, phish_file, legit_file)
+    if arguments[1].lower() == 'delete':
+        delete_urls()
+    else: 
+        keyword, url_file, is_legit = arguments[1], arguments[2], arguments[3]
+        build_features(keyword, url_file, is_legit)
