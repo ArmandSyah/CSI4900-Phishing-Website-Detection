@@ -1,5 +1,19 @@
 {
   "censys_UID": "",
   "censys_Secret": "",
-  "shodan_key": ""
+  "shodan_key": "",
+  "datasets": [
+      {
+          "keyword": "paypal",
+          "file_path": "phishing_sites\\paypal.txt",
+          "is_legit": 0
+      },
+      {
+        "keyword": "paypal",
+        "file_path": "phishing_sites\\legit_urls.txt",
+        "is_legit": 1
+      }
+  ],
+  "primary_keyword": "",
+  "url": ""
 }

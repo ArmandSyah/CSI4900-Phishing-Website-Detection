@@ -36,7 +36,6 @@ def build_model():
     feature_columns.remove('query')
     feature_columns.remove('fragment')
     feature_columns.remove('cert_auth')
-    feature_columns.remove('target_url')
     feature_columns.remove('unknown_url')
     feature_columns.remove('keyword')
 
@@ -60,7 +59,7 @@ class ClassificationModel:
         self.target_variable = target_variables
 
         self.features_train, self.features_test, self.target_train, self.target_test = train_test_split(
-            self.features, self.target_variable, test_size=.4, random_state=42)
+            self.features, self.target_variable, test_size=.5, random_state=42)
         self.clf = classifier.fit(self.features_train, self.target_train)
 
     def predict_test_set(self):
@@ -106,8 +105,6 @@ class ClassificationModel:
         url_df = pd.concat([url_df, one_hot_protocol], axis=1)
         one_hot_protocol = pd.get_dummies(url_df['cert_auth'], columns=['cert_auth'])
         url_df = pd.concat([url_df, one_hot_protocol], axis=1)
-        url_df['http'] = 1 if url_df.iloc[0]['protocol'] == 'http' else 0
-        url_df['https'] = 1 if url_df.iloc[0]['protocol'] == 'https' else 0
         url_features = url_df[self.feature_columns]
         self.clf.fit(url_features, [label])
 

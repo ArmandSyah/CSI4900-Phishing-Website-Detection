@@ -22,14 +22,14 @@ class NewFeatures:
         parsed_unknown_url = urlparse(url)
         unknown_netloc = parsed_unknown_url.netloc
 
-        self.keyword_in_url = keyword in url
+        self.keyword_in_url = keyword in url.lower()
         self.keyword_in_domain = check_keyword_in_domain(keyword, url)
         self.similar_keyword_in_url = check_similar_keyword_in_url(keyword, url)
         self.cert_auth = check_cert_auth(url)
 
 def check_keyword_in_domain(keyword: str, unknown_url: str):
     parsed_unknown_url = urlparse(unknown_url)
-    unknown_url_netloc = parsed_unknown_url.netloc
+    unknown_url_netloc = parsed_unknown_url.netloc.lower()
     return keyword in unknown_url_netloc
 
 # check if there is a variant of the keyword hidden in url

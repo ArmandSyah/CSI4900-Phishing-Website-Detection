@@ -24,7 +24,7 @@ class WebsiteInfo:
         self.query = QueryPart(parse_qs(parsed_url.query), parsed_url.query)
         self.fragment = FragmentPart(parsed_url.fragment, len(url))
         self.new_features = NewFeatures(url, keyword)
-        self.is_legit = is_legit
+        self.is_legit = int(is_legit)
     
     def to_json(self):
         url_features = {}

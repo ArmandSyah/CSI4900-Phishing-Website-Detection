@@ -34,6 +34,7 @@ def delete_urls():
     db = client['phishing_training_data']
     websites = db.websites
     websites.drop()
+    print('Websites Deleted')
 
 
 if __name__ == "__main__":

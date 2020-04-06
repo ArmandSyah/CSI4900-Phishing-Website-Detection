@@ -1,7 +1,9 @@
 import sys
 import os
+import pickle
 
 from pymongo import MongoClient
+from src.website_elasticsearch import Website
 
 def evaluate_websites(sites_to_evaluate_file: str, keyword: str):
     client = MongoClient('localhost', 27017)
@@ -24,6 +26,8 @@ def evaluate_websites(sites_to_evaluate_file: str, keyword: str):
         u['is_legit'] = int(predicted_result)
         u['confidence_score'] = confidence_score
         evaluation_results.insert(u)
+        url_es = Website(unknown_url=url, keyword=keyword, is_legit=int(predicted_result))
+        url_es.save()
 
 
 if __name__ == "__main__":

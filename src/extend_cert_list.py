@@ -9,6 +9,9 @@ def extend_cert_list():
         data = json.load(config)
         shodan_key = data['shodan_key']
 
+    if not shodan_key:
+        return
+
     shodan_api = Shodan(shodan_key)
 
     http_banners = []
@@ -41,14 +44,17 @@ def extend_cert_list():
     mmh3_hashes.remove(0)
 
     with open('extended_cert_list.txt', 'w+') as extended_cert_list:
-        for h in mmh3_hashes:
-            query = f'hash:{h}'
-            results = shodan_api.search(query)
-            print(f'Total for hash {h}: {results["total"]}')
-            for result in results['matches']:
-                hostnames = result['hostnames']
-                for hostname in hostnames:
-                    extended_cert_list.write(f'{hostname}\n')
+        try:
+            for h in mmh3_hashes:
+                query = f'hash:{h}'
+                results = shodan_api.search(query)
+                print(f'Total for hash {h}: {results["total"]}')
+                for result in results['matches']:
+                    hostnames = result['hostnames']
+                    for hostname in hostnames:
+                        extended_cert_list.write(f'{hostname}\n')
+        except:
+            print('Potential API Error. Please upgrade your shodan account to support filter/paging')
 
 if __name__ == "__main__":
     extend_cert_list()
