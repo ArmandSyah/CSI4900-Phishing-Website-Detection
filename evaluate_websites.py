@@ -4,13 +4,14 @@ import pickle
 
 from pymongo import MongoClient
 from src.website_elasticsearch import Website
+from src.MLEvaluation.train_model import RandomForest
 
 def evaluate_websites(sites_to_evaluate_file: str, keyword: str):
     client = MongoClient('localhost', 27017)
     db = client['phishing_evaluation_results']
     evaluation_results = db.evaluation_results
 
-    with open(os.path.join('.\\', 'models\\random_forest.pkl'), 'rb') as rf_pickle:
+    with open(os.path.join(os.getcwd(), 'models\\random_forest.pkl'), 'rb') as rf_pickle:
         rf = pickle.load(rf_pickle)
 
     url_data = os.path.join(os.getcwd(), sites_to_evaluate_file)
@@ -28,7 +29,6 @@ def evaluate_websites(sites_to_evaluate_file: str, keyword: str):
         evaluation_results.insert(u)
         url_es = Website(unknown_url=url, keyword=keyword, is_legit=int(predicted_result))
         url_es.save()
-
 
 if __name__ == "__main__":
     sites_to_evaluate_file, keyword = sys.argv[1], sys.argv[2]

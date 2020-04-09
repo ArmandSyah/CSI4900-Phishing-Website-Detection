@@ -23,6 +23,8 @@ def build_model():
 
     df = df.sample(frac=1)  # shuffle the rows
 
+    certs = df.cert_auth.unique()
+
     one_hot_protocol = pd.get_dummies(df['protocol'], columns=['protocol'])
     df = pd.concat([df, one_hot_protocol], axis=1)
     one_hot_protocol = pd.get_dummies(df['cert_auth'], columns=['cert_auth'])
@@ -43,7 +45,7 @@ def build_model():
     target_variable = df.is_legit
 
     print('\nRandom Forest Results:')
-    rf = RandomForest(features, feature_columns, target_variable)
+    rf = RandomForest(features, feature_columns, target_variable, certs)
     rf.predict_test_set()
 
     print('Pickling random forest')
@@ -53,7 +55,7 @@ def build_model():
     client.close()
 
 class ClassificationModel:
-    def __init__(self, features, feature_columns, target_variables, classifier):
+    def __init__(self, features, feature_columns, target_variables, classifier, certs):
         self.features = features
         self.feature_columns = feature_columns
         self.target_variable = target_variables
@@ -61,6 +63,7 @@ class ClassificationModel:
         self.features_train, self.features_test, self.target_train, self.target_test = train_test_split(
             self.features, self.target_variable, test_size=.5, random_state=42)
         self.clf = classifier.fit(self.features_train, self.target_train)
+        self.certs = certs
 
     def predict_test_set(self):
         target_predictions = self.clf.predict(self.features_test)
@@ -88,10 +91,13 @@ class ClassificationModel:
     def predict_url(self, url: str, keyword: str):
         u = WebsiteInfo(url, keyword).to_json()
         url_df = pd.DataFrame.from_records([u])
-        one_hot_protocol = pd.get_dummies(url_df['protocol'], columns=['protocol'])
-        url_df = pd.concat([url_df, one_hot_protocol], axis=1)
-        one_hot_protocol = pd.get_dummies(url_df['cert_auth'], columns=['cert_auth'])
-        url_df = pd.concat([url_df, one_hot_protocol], axis=1)
+
+        url_df['http'] = 1 if url_df.iloc[0]['protocol'] == 'http' else 0
+        url_df['https'] = 1 if url_df.iloc[0]['protocol'] == 'https' else 0
+        
+        for c in self.certs:
+            url_df[c] = 1 if url_df.iloc[0]['cert_auth'] == c else 0
+
         url_features = url_df[self.feature_columns]
         target_prediction = self.clf.predict(url_features)
         class_probabilities = self.clf.predict_proba(url_features)
@@ -101,17 +107,20 @@ class ClassificationModel:
     def fit_classifier(self, url: str,  keyword: str, label):
         u = WebsiteInfo(url, keyword).to_json()
         url_df = pd.DataFrame.from_records([u])
-        one_hot_protocol = pd.get_dummies(url_df['protocol'], columns=['protocol'])
-        url_df = pd.concat([url_df, one_hot_protocol], axis=1)
-        one_hot_protocol = pd.get_dummies(url_df['cert_auth'], columns=['cert_auth'])
-        url_df = pd.concat([url_df, one_hot_protocol], axis=1)
+
+        url_df['http'] = 1 if url_df.iloc[0]['protocol'] == 'http' else 0
+        url_df['https'] = 1 if url_df.iloc[0]['protocol'] == 'https' else 0
+        
+        for c in self.certs:
+            url_df[c] = 1 if url_df.iloc[0]['cert_auth'] == c else 0
+            
         url_features = url_df[self.feature_columns]
         self.clf.fit(url_features, [label])
 
 class RandomForest(ClassificationModel):
-    def __init__(self, features, feature_columns, target_variable):
+    def __init__(self, features, feature_columns, target_variable, certs):
         clf = RandomForestClassifier(n_estimators=100)
-        super().__init__(features, feature_columns, target_variable, clf)
+        super().__init__(features, feature_columns, target_variable, clf, certs)
 
 if __name__ == "__main__":
     build_model()

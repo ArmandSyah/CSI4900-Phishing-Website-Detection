@@ -21,11 +21,12 @@ class NewFeatures:
     def __init__(self, url: str, keyword: str):
         parsed_unknown_url = urlparse(url)
         unknown_netloc = parsed_unknown_url.netloc
+        cert_auth = check_cert_auth(url)
 
         self.keyword_in_url = keyword in url.lower()
         self.keyword_in_domain = check_keyword_in_domain(keyword, url)
         self.similar_keyword_in_url = check_similar_keyword_in_url(keyword, url)
-        self.cert_auth = check_cert_auth(url)
+        self.cert_auth = cert_auth if cert_auth is not None else "No Cert Auth Found"
 
 def check_keyword_in_domain(keyword: str, unknown_url: str):
     parsed_unknown_url = urlparse(unknown_url)

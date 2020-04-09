@@ -1,4 +1,5 @@
 import docker
+import os
 import sys
 import json
 import censys.certificates
@@ -7,11 +8,12 @@ import tldextract
 
 from urllib.parse import urlparse
 
-client = docker.from_env()
 
 def call_dnstwist(netloc: str):
+    client = docker.from_env()
+
     while True:
-        try: 
+        try:
             output = client.containers.run('elceef/dnstwist', f'--registered --banners --format json {netloc}')
             output = output.decode('utf8').replace("'", '"')
             with open('out_dnstwist.json', 'w') as f:
@@ -42,12 +44,13 @@ def create_candidate_list(netloc: str, domain: str):
             for domain_object in output:
                 if domain_object["domain-name"] != netloc:
                     candidate_list.write(f'{domain_object["domain-name"]}\n')
-        with open('out_censys.json', 'r') as f:
-            output = json.load(f)
-            for entry in output:
-                for parsed_domain in entry['parsed.names']:
-                    if parsed_domain != netloc and domain in parsed_domain:
-                        candidate_list.write(f'{parsed_domain}\n')
+        if os.path.isfile('out_censys.json'):
+            with open('out_censys.json', 'r') as f:
+                output = json.load(f)
+                for entry in output:
+                    for parsed_domain in entry['parsed.names']:
+                        if parsed_domain != netloc and domain in parsed_domain:
+                            candidate_list.write(f'{parsed_domain}\n')
 
 def create_candidate(url: str):
     with open('config.json', 'r')  as config:

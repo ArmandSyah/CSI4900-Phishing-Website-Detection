@@ -45,11 +45,16 @@ def create_cert_list():
         censys_uid = data['censys_UID']
         censys_secret = data['censys_Secret']
 
+    use_censys = (censys_uid and censys_secret)
     with open('cert_list.txt', 'w+') as cert_list, open('candidate_list.txt', 'r') as candidate_list:
         for _, candidate_domain in enumerate(candidate_list):
-            print(f'searching: {candidate_domain.strip()}')
-            if censys_uid and censys_secret:
-                result = search_censys(candidate_domain.strip(), censys_uid, censys_secret)  
+            if use_censys:
+                try:
+                    result = search_censys(candidate_domain.strip(), censys_uid, censys_secret)  
+                except:
+                    print('Censys exception occured, please upgrade your Censys account next time to properly use this service')
+                    result = search_crtsh(candidate_domain.strip())
+                    use_censys = False
             else: 
                 result = search_crtsh(candidate_domain.strip())
             if result:

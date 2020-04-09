@@ -24,6 +24,9 @@ docker-machine env --shell cmd <name of your docker vm>
 @FOR /f "tokens=*" %i IN ('docker-machine env --shell cmd <name of your docker vm>') DO @%i
 ```
 
+docker-machine env --shell cmd default
+@FOR /f "tokens=*" %i IN ('docker-machine env --shell cmd default') DO @%i
+
 This will ensure Docker will run on Windows
 
 #### Get the DNSTwist Docker Container
