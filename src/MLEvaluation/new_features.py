@@ -11,22 +11,22 @@ from cryptography import x509
 from cryptography.x509.oid import NameOID
 import idna
 
-from socket import socket
+from socket import socket, AF_INET, SOCK_STREAM
 
 from difflib import SequenceMatcher
+
+import tldextract
 
 import os
 
 class NewFeatures:
     def __init__(self, url: str, keyword: str):
-        parsed_unknown_url = urlparse(url)
-        unknown_netloc = parsed_unknown_url.netloc
-        cert_auth = check_cert_auth(url)
+        # cert_auth = check_cert_auth(url)
 
-        self.keyword_in_url = keyword in url.lower()
-        self.keyword_in_domain = check_keyword_in_domain(keyword, url)
-        self.similar_keyword_in_url = check_similar_keyword_in_url(keyword, url)
-        self.cert_auth = cert_auth if cert_auth is not None else "No Cert Auth Found"
+        self.keyword_in_url = keyword in url.lower() if keyword else False
+        self.keyword_in_domain = check_keyword_in_domain(keyword, url) if keyword else False
+        self.similar_keyword_in_url = check_similar_keyword_in_url(keyword, url) if keyword else False
+        # self.cert_auth = cert_auth if cert_auth is not None else "No Certificate Authority Found"
 
 def check_keyword_in_domain(keyword: str, unknown_url: str):
     parsed_unknown_url = urlparse(unknown_url)
@@ -47,17 +47,20 @@ def check_similar_keyword_in_url(keyword: str, unknown_url: str):
 def check_cert_auth(unknown_url: str):
     try:
         parsed_unknown_url = urlparse(unknown_url)
-        unknown_netloc = parsed_unknown_url.netloc
+        hostname = parsed_unknown_url.netloc
         port = parsed_unknown_url.port
 
         if port is None:
             port = 443 if parsed_unknown_url.scheme == 'https' else 80
 
-        hostname_idna = idna.encode(unknown_netloc)
-        sock = socket()
+        hostname_idna = idna.encode(hostname)
+        sock = socket(AF_INET, SOCK_STREAM)
+        sock.settimeout(5)
 
-        sock.connect((unknown_netloc, port))
-        ctx = SSL.Context(SSL.SSLv23_METHOD) # most compatible
+        sock.connect((hostname, port))
+        sock.setblocking(1)
+
+        ctx = SSL.Context(SSL.SSLv23_METHOD) 
         ctx.check_hostname = False
         ctx.verify_mode = SSL.VERIFY_NONE
 
@@ -65,8 +68,10 @@ def check_cert_auth(unknown_url: str):
         sock_ssl.set_connect_state()
         sock_ssl.set_tlsext_host_name(hostname_idna)
         sock_ssl.do_handshake()
+
         cert = sock_ssl.get_peer_certificate()
         crypto_cert = cert.to_cryptography()
+        
         sock_ssl.close()
         sock.close()
 
@@ -74,9 +79,6 @@ def check_cert_auth(unknown_url: str):
             names = crypto_cert.issuer.get_attributes_for_oid(NameOID.COMMON_NAME)
             return names[0].value
         except x509.ExtensionNotFound:
-            print('Could not retrieve cert issuer')
             return None
     except:
-        print('Could not retrieve cert issuer')
         return None
-

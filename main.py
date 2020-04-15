@@ -1,7 +1,8 @@
 import sys
 import json
+from collections import defaultdict
 
-from os import path, getcwd
+from os import path, getcwd, remove
 from evaluate_websites import evaluate_websites
 
 from src.create_candidate_list import create_candidate
@@ -20,8 +21,19 @@ import time
 es = Elasticsearch()
 connections.create_connection()
 
+def reset():
+    if path.exists(path.join(getcwd(), 'models\\random_forest.pkl')):
+        remove(path.join(getcwd(), 'models\\random_forest.pkl'))
+
+    if es.indices.exists(index="website"):
+        es.indices.delete(index='website', ignore=[400, 404])
+
+    delete_urls()
+
 def run_pipeline():
     if not es.indices.exists(index="website"):
+        body = {"index.blocks.read_only_allow_delete": None}
+        es.indices.put_settings(index="_all", body=body)
         Website.init()
 
     with open('config.json', 'r')  as config:
@@ -32,10 +44,16 @@ def run_pipeline():
     if not path.exists(path.join(getcwd(), 'models\\random_forest.pkl')):
         print("Setting up random forest")
         for dataset in datasets:
-            keyword, file_path, is_legit = dataset['keyword'], dataset['file_path'], dataset['is_legit']
-            build_features(keyword, file_path, is_legit)
+            keyword = dataset.get('keyword') 
+            file_path = dataset.get('file_path') 
+            is_legit = dataset.get('is_legit') 
+            file_type = dataset.get('file_type')
+            num_rows = dataset.get('num_rows', None)
+            csv_url_pos = dataset.get('csv_url_pos', 0) 
+            build_features(keyword, file_path, is_legit, file_type, num_rows, csv_url_pos)
         build_model()
-
+        print("finished setting up random forest")
+        
     print("Beginning Pipeline")
 
     while True:
@@ -54,4 +72,8 @@ def run_pipeline():
         time.sleep(3600)
 
 if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        if sys.argv[1].lower() == 'fresh':
+            print('Reseting all json, mongodb and elasticsearch for fresh run')
+            reset()
     run_pipeline()

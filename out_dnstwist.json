@@ -1,1099 +1,14 @@
 [
     {
         "dns-a": [
-            "69.164.34.152"
-        ],
-        "domain-name": "www.bell.ca",
-        "fuzzer": "original*"
-    },
-    {
-        "dns-a": [
-            "72.55.137.168"
-        ],
-        "dns-mx": [
-            "belle.ca"
-        ],
-        "dns-ns": [
-            "ns.cnsc.ca",
-            "ns2.cnsc.ca"
-        ],
-        "domain-name": "www.belle.ca",
-        "fuzzer": "addition"
-    },
-    {
-        "dns-a": [
-            "72.52.10.14"
-        ],
-        "domain-name": "www.belll.ca",
-        "fuzzer": "addition"
-    },
-    {
-        "dns-a": [
-            "184.168.131.241"
-        ],
-        "domain-name": "www.bellm.ca",
-        "fuzzer": "addition"
-    },
-    {
-        "dns-a": [
-            "216.254.141.10"
-        ],
-        "domain-name": "www.bello.ca",
-        "fuzzer": "addition"
-    },
-    {
-        "dns-a": [
-            "199.59.242.153"
-        ],
-        "domain-name": "www.bells.ca",
-        "fuzzer": "addition"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "www.belly.ca",
-        "fuzzer": "addition"
-    },
-    {
-        "dns-a": [
-            "172.105.13.19"
-        ],
-        "domain-name": "www.bellz.ca",
-        "fuzzer": "addition"
-    },
-    {
-        "dns-a": [
-            "66.96.131.41"
-        ],
-        "domain-name": "www.cell.ca",
-        "fuzzer": "bitsquatting"
-    },
-    {
-        "dns-a": [
-            "198.4.44.6"
-        ],
-        "dns-ns": [
-            "dns1.cscdns.net",
-            "dns2.cscdns.net"
-        ],
-        "domain-name": "www.rell.ca",
-        "fuzzer": "bitsquatting"
-    },
-    {
-        "dns-a": [
-            "184.168.221.55"
-        ],
-        "dns-ns": [
-            "ns63.domaincontrol.com",
-            "ns64.domaincontrol.com"
-        ],
-        "domain-name": "www.bdll.ca",
-        "fuzzer": "bitsquatting"
-    },
-    {
-        "dns-a": [
-            "24.207.1.226"
-        ],
-        "domain-name": "www.ball.ca",
-        "fuzzer": "bitsquatting"
-    },
-    {
-        "dns-a": [
-            "70.33.246.190"
-        ],
-        "dns-mx": [
-            "bmll.ca"
-        ],
-        "dns-ns": [
-            "ns1.hostpapa.com",
-            "ns2.hostpapa.com"
-        ],
-        "domain-name": "www.bmll.ca",
-        "fuzzer": "bitsquatting"
-    },
-    {
-        "dns-a": [
-            "69.172.201.153"
-        ],
-        "dns-mx": [
-            "mx247.in-mx.com",
-            "mx247.in-mx.net"
-        ],
-        "dns-ns": [
-            "ns1.uniregistrymarket.link",
-            "ns2.uniregistrymarket.link"
-        ],
-        "domain-name": "www.bull.ca",
-        "fuzzer": "bitsquatting"
-    },
-    {
-        "dns-a": [
-            "107.180.46.244"
-        ],
-        "dns-mx": [
-            "mail.beml.ca"
-        ],
-        "dns-ns": [
-            "ns11.domaincontrol.com",
-            "ns12.domaincontrol.com"
-        ],
-        "domain-name": "www.beml.ca",
-        "fuzzer": "bitsquatting"
-    },
-    {
-        "dns-a": [
-            "184.168.221.47"
-        ],
-        "dns-mx": [
-            "ALT1.ASPMX.L.GOOGLE.COM",
-            "ALT2.ASPMX.L.GOOGLE.COM",
-            "ASPMX.L.GOOGLE.COM",
-            "ASPMX2.GOOGLEMAIL.COM",
-            "ASPMX3.GOOGLEMAIL.COM"
-        ],
-        "dns-ns": [
-            "ns17.domaincontrol.com",
-            "ns18.domaincontrol.com"
-        ],
-        "domain-name": "www.beld.ca",
-        "fuzzer": "bitsquatting"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--sjgaa.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-c3s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-52s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-u2s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-pt1a.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-7sma.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-9ua.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-o4s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--wjgaa.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "108.178.42.82"
-        ],
-        "domain-name": "www.bcil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-nt1a.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "www.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--qgjaa.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "198.54.117.210",
-            "198.54.117.211",
-            "198.54.117.212",
-            "198.54.117.215",
-            "198.54.117.216",
-            "198.54.117.217",
-            "198.54.117.218"
-        ],
-        "domain-name": "www.beii.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ekgaa.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-9naa.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-iuma.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-ot1a.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-n2s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-t2s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--9gaaa.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "184.168.131.241"
-        ],
-        "dns-mx": [
-            "mailstore1.secureserver.net",
-            "smtp.secureserver.net"
-        ],
-        "dns-ns": [
-            "ns43.domaincontrol.com",
-            "ns44.domaincontrol.com"
-        ],
-        "domain-name": "www.bcii.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-ntma.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "199.34.228.100"
-        ],
-        "domain-name": "www.clell.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-jtma.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-6msa.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-6sma.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "192.185.54.177"
-        ],
-        "dns-mx": [
-            "alt1.aspmx.l.google.com",
-            "alt2.aspmx.l.google.com",
-            "aspmx.l.google.com",
-            "aspmx2.googlemail.com",
-            "aspmx3.googlemail.com"
-        ],
-        "dns-ns": [
-            "ns8085.hostgator.com",
-            "ns8086.hostgator.com"
-        ],
-        "domain-name": "www.beli.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-z2s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-otma.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-juma.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-ktma.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-cva.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-12s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-btma.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-p2s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-n4s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "vvww.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "184.168.221.61"
-        ],
-        "dns-mx": [
-            "lbell-ca.mail.protection.outlook.com"
-        ],
-        "dns-ns": [
-            "ns01.domaincontrol.com",
-            "ns02.domaincontrol.com"
-        ],
-        "domain-name": "www.lbell.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "50.63.202.51"
-        ],
-        "dns-ns": [
-            "ns29.domaincontrol.com",
-            "ns30.domaincontrol.com"
-        ],
-        "domain-name": "www.be11.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "wvvvv.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ujgaa.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-o2s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-ctma.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "wvvw.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-d3s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-gtma.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-v2s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "23.227.38.64"
-        ],
-        "domain-name": "www.bcli.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "vvvvw.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-72s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-e3s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-62s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-7msa.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--yjgaa.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-02s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--qjgaa.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-bva.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-ftma.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--w-boaa.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "wwvv.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "143.166.30.167"
-        ],
-        "domain-name": "www.dell.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "vvvvvv.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "72.52.179.174"
-        ],
-        "dns-mx": [
-            "mx156.hostedmxserver.com"
-        ],
-        "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
-        ],
-        "domain-name": "xn--ww-m4s.beil.ca",
-        "fuzzer": "homoglyph"
-    },
-    {
-        "dns-a": [
-            "74.220.199.6"
-        ],
-        "domain-name": "www.gbell.ca",
-        "fuzzer": "insertion"
-    },
-    {
-        "dns-a": [
-            "184.150.210.82",
-            "184.150.211.82"
-        ],
-        "domain-name": "www3.bell.ca",
-        "fuzzer": "insertion"
-    },
-    {
-        "dns-a": [
-            "66.96.160.129"
-        ],
-        "domain-name": "www.bwell.ca",
-        "fuzzer": "insertion"
-    },
-    {
-        "dns-a": [
-            "74.208.236.43"
+            "23.46.67.144"
         ],
         "dns-aaaa": [
-            "2607:f1c0:100f:f000::266"
+            "2600:140a:0:68f::fe9",
+            "2600:140a:0:693::fe9"
         ],
-        "domain-name": "www.nbell.ca",
-        "fuzzer": "insertion"
-    },
-    {
-        "dns-a": [
-            "208.73.210.202",
-            "208.73.210.217",
-            "208.73.211.165",
-            "208.73.211.177"
-        ],
-        "dns-ns": [
-            "ns1.dsredirection.com",
-            "ns2.dsredirection.com"
-        ],
-        "domain-name": "wwwbell.ca",
-        "fuzzer": "omission"
-    },
-    {
-        "dns-a": [
-            "158.85.87.76"
-        ],
-        "dns-mx": [
-            "mail.bll.ca"
-        ],
-        "dns-ns": [
-            "slns1.namespro.ca",
-            "slns2.namespro.ca"
-        ],
-        "domain-name": "www.bll.ca",
-        "fuzzer": "omission"
+        "domain-name": "www.canada.ca",
+        "fuzzer": "original*"
     },
     {
         "dns-a": [
@@ -1103,32 +18,920 @@
             "ns1.smartname.com",
             "ns2.smartname.com"
         ],
-        "domain-name": "www.beell.ca",
+        "domain-name": "www.canadaa.ca",
+        "fuzzer": "addition"
+    },
+    {
+        "dns-a": [
+            "185.201.11.164"
+        ],
+        "dns-mx": [
+            "mx1.hostinger.com"
+        ],
+        "dns-ns": [
+            "ns1.hostinger.com",
+            "ns2.hostinger.com",
+            "ns3.hostinger.com",
+            "ns4.hostinger.com"
+        ],
+        "domain-name": "www.canadab.ca",
+        "fuzzer": "addition"
+    },
+    {
+        "dns-a": [
+            "209.17.116.160"
+        ],
+        "domain-name": "www.canadac.ca",
+        "fuzzer": "addition"
+    },
+    {
+        "dns-a": [
+            "208.123.117.85"
+        ],
+        "dns-aaaa": [
+            "2607:a680:0:52::178"
+        ],
+        "dns-mx": [
+            "canadae.ca"
+        ],
+        "dns-ns": [
+            "ns1.shockhosting.net",
+            "ns2.shockhosting.net"
+        ],
+        "domain-name": "www.canadae.ca",
+        "fuzzer": "addition"
+    },
+    {
+        "dns-a": [
+            "50.63.202.39"
+        ],
+        "dns-ns": [
+            "ns17.domaincontrol.com",
+            "ns18.domaincontrol.com"
+        ],
+        "domain-name": "www.canadah.ca",
+        "fuzzer": "addition"
+    },
+    {
+        "dns-a": [
+            "199.59.242.153"
+        ],
+        "domain-name": "www.canadai.ca",
+        "fuzzer": "addition"
+    },
+    {
+        "dns-a": [
+            "172.217.164.211"
+        ],
+        "dns-aaaa": [
+            "2607:f8b0:400b:809::2013"
+        ],
+        "domain-name": "www.canadan.ca",
+        "fuzzer": "addition"
+    },
+    {
+        "dns-a": [
+            "66.96.162.146"
+        ],
+        "domain-name": "www.canadar.ca",
+        "fuzzer": "addition"
+    },
+    {
+        "dns-a": [
+            "199.59.242.153"
+        ],
+        "domain-name": "www.canadas.ca",
+        "fuzzer": "addition"
+    },
+    {
+        "dns-a": [
+            "69.172.239.145"
+        ],
+        "dns-mx": [
+            "canadat.ca"
+        ],
+        "dns-ns": [
+            "ns1.hostpapa.com",
+            "ns2.hostpapa.com"
+        ],
+        "domain-name": "www.canadat.ca",
+        "fuzzer": "addition"
+    },
+    {
+        "dns-a": [
+            "107.180.28.116"
+        ],
+        "dns-mx": [
+            "canadau-ca.mail.protection.outlook.com"
+        ],
+        "dns-ns": [
+            "ns3.secureserver.net",
+            "ns4.secureserver.net"
+        ],
+        "domain-name": "www.canadau.ca",
+        "fuzzer": "addition"
+    },
+    {
+        "dns-a": [
+            "69.16.231.58"
+        ],
+        "domain-name": "www.canaday.ca",
+        "fuzzer": "addition"
+    },
+    {
+        "dns-a": [
+            "68.233.232.178"
+        ],
+        "dns-mx": [
+            "ganada.ca"
+        ],
+        "dns-ns": [
+            "ns1.kukiweb.com",
+            "ns2.kukiweb.com"
+        ],
+        "domain-name": "www.ganada.ca",
+        "fuzzer": "bitsquatting"
+    },
+    {
+        "dns-a": [
+            "184.106.136.222"
+        ],
+        "domain-name": "www.kanada.ca",
+        "fuzzer": "bitsquatting"
+    },
+    {
+        "dns-a": [
+            "192.185.48.138"
+        ],
+        "dns-mx": [
+            "sanada.ca"
+        ],
+        "dns-ns": [
+            "ns8247.hostgator.com",
+            "ns8248.hostgator.com"
+        ],
+        "domain-name": "www.sanada.ca",
+        "fuzzer": "bitsquatting"
+    },
+    {
+        "dns-a": [
+            "162.241.27.64"
+        ],
+        "dns-ns": [
+            "ns51.domaincontrol.com",
+            "ns52.domaincontrol.com"
+        ],
+        "domain-name": "www.calada.ca",
+        "fuzzer": "bitsquatting"
+    },
+    {
+        "dns-a": [
+            "54.208.24.193"
+        ],
+        "domain-name": "www.caneda.ca",
+        "fuzzer": "bitsquatting"
+    },
+    {
+        "dns-a": [
+            "35.186.238.101"
+        ],
+        "dns-ns": [
+            "ns1.smartname.com",
+            "ns2.smartname.com"
+        ],
+        "domain-name": "www.canafa.ca",
+        "fuzzer": "bitsquatting"
+    },
+    {
+        "dns-a": [
+            "205.189.40.165"
+        ],
+        "dns-mx": [
+            "canala.ca",
+            "mail.canala.ca"
+        ],
+        "dns-ns": [
+            "ns1.hostpapa.com",
+            "ns2.hostpapa.com"
+        ],
+        "domain-name": "www.canala.ca",
+        "fuzzer": "bitsquatting"
+    },
+    {
+        "dns-a": [
+            "162.216.9.51"
+        ],
+        "dns-ns": [
+            "ns1.adsmlb.com",
+            "ns2.adsmlb.com"
+        ],
+        "domain-name": "www.canata.ca",
+        "fuzzer": "bitsquatting"
+    },
+    {
+        "dns-a": [
+            "50.63.202.48"
+        ],
+        "dns-mx": [
+            "alt1.aspmx.l.google.com",
+            "alt2.aspmx.l.google.com",
+            "aspmx.l.google.com",
+            "aspmx2.googlemail.com",
+            "aspmx3.googlemail.com"
+        ],
+        "dns-ns": [
+            "ns75.domaincontrol.com",
+            "ns76.domaincontrol.com"
+        ],
+        "domain-name": "www.canadi.ca",
+        "fuzzer": "bitsquatting"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--w-otma.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "vvvvw.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--wjgaa.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "54.236.162.93"
+        ],
+        "domain-name": "www.cannada.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ekgaa.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--w-6msa.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-bva.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--yjgaa.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-t2s.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-pt1a.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--w-9naa.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ujgaa.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--w-7msa.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--qgjaa.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-v2s.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-o4s.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--w-ntma.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--w-jtma.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-72s.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "wvvvv.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-cva.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--w-juma.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-p2s.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--qjgaa.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--w-6sma.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-c3s.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-n4s.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "www.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--w-gtma.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--w-iuma.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--w-ktma.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "wvvw.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--w-btma.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-d3s.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--w-ctma.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--sjgaa.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-u2s.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--9gaaa.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-o2s.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "162.241.216.200"
+        ],
+        "dns-mx": [
+            "mail.canadia.ca"
+        ],
+        "dns-ns": [
+            "ns1.bluehost.com",
+            "ns2.bluehost.com"
+        ],
+        "domain-name": "www.canadia.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--w-7sma.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-z2s.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "vvvvvv.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--w-boaa.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-m4s.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "72.55.165.10"
+        ],
+        "dns-mx": [
+            "mx1.spamshield.io",
+            "mx2.spamshield.io",
+            "mx3.spamshield.io",
+            "mx4.spamshield.io"
+        ],
+        "dns-ns": [
+            "ns-mtl-1.webdomaine.ca",
+            "ns-mtl-2.webdomaine.ca",
+            "ns-ny-1.webdomaine.ca",
+            "ns-tor-1.webdomaine.ca"
+        ],
+        "domain-name": "www.camada.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-02s.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-e3s.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "23.227.38.64"
+        ],
+        "domain-name": "www.carada.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "vvww.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-n2s.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-9ua.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-12s.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-nt1a.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "wwvv.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-ot1a.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--w-ftma.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-52s.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "98.158.82.5"
+        ],
+        "domain-name": "xn--ww-62s.canaba.ca",
+        "fuzzer": "homoglyph"
+    },
+    {
+        "dns-a": [
+            "205.189.40.165"
+        ],
+        "dns-mx": [
+            "mail.can-ada.ca"
+        ],
+        "dns-ns": [
+            "ns1.hostpapa.com",
+            "ns2.hostpapa.com"
+        ],
+        "domain-name": "www.can-ada.ca",
+        "fuzzer": "hyphenation"
+    },
+    {
+        "dns-a": [
+            "205.186.187.233"
+        ],
+        "domain-name": "www.xcanada.ca",
+        "fuzzer": "insertion"
+    },
+    {
+        "dns-a": [
+            "159.203.12.111"
+        ],
+        "dns-ns": [
+            "ns01.domaincontrol.com",
+            "ns02.domaincontrol.com"
+        ],
+        "domain-name": "www.vcanada.ca",
+        "fuzzer": "insertion"
+    },
+    {
+        "dns-a": [
+            "199.59.242.153"
+        ],
+        "domain-name": "www.canasda.ca",
+        "fuzzer": "insertion"
+    },
+    {
+        "dns-a": [
+            "198.103.238.14"
+        ],
+        "domain-name": "www2.canada.ca",
+        "fuzzer": "insertion"
+    },
+    {
+        "dns-a": [
+            "66.96.149.2"
+        ],
+        "domain-name": "www.dcanada.ca",
+        "fuzzer": "insertion"
+    },
+    {
+        "dns-a": [
+            "69.10.139.234"
+        ],
+        "domain-name": "www.canarda.ca",
+        "fuzzer": "insertion"
+    },
+    {
+        "dns-a": [
+            "216.40.47.17"
+        ],
+        "domain-name": "www.canaa.ca",
+        "fuzzer": "omission"
+    },
+    {
+        "dns-a": [
+            "216.40.47.17"
+        ],
+        "domain-name": "www.caada.ca",
+        "fuzzer": "omission"
+    },
+    {
+        "dns-a": [
+            "54.236.162.93"
+        ],
+        "dns-mx": [
+            "loopback.domainsatcost.ca"
+        ],
+        "dns-ns": [
+            "dns.domainsatcost.ca",
+            "dns2.domainsatcost.ca"
+        ],
+        "domain-name": "wwwcanada.ca",
+        "fuzzer": "omission"
+    },
+    {
+        "dns-a": [
+            "72.52.179.174"
+        ],
+        "dns-mx": [
+            "mx156.hostedmxserver.com"
+        ],
+        "dns-ns": [
+            "ns1.parklogic.com",
+            "ns2.parklogic.com"
+        ],
+        "domain-name": "www.canad.ca",
+        "fuzzer": "omission"
+    },
+    {
+        "dns-a": [
+            "216.40.47.17"
+        ],
+        "domain-name": "www.cnada.ca",
+        "fuzzer": "omission"
+    },
+    {
+        "dns-a": [
+            "184.168.131.241"
+        ],
+        "dns-mx": [
+            "canda-ca.mail.protection.outlook.com"
+        ],
+        "dns-ns": [
+            "ns19.domaincontrol.com",
+            "ns20.domaincontrol.com"
+        ],
+        "domain-name": "www.canda.ca",
+        "fuzzer": "omission"
+    },
+    {
+        "dns-a": [
+            "184.168.221.57"
+        ],
+        "dns-mx": [
+            "mailstore1.secureserver.net",
+            "smtp.secureserver.net"
+        ],
+        "dns-ns": [
+            "ns01.domaincontrol.com",
+            "ns02.domaincontrol.com"
+        ],
+        "domain-name": "www.anada.ca",
+        "fuzzer": "omission"
+    },
+    {
+        "dns-a": [
+            "198.54.120.235"
+        ],
+        "dns-mx": [
+            "mail.canaada.ca"
+        ],
+        "dns-ns": [
+            "dns1.namecheaphosting.com",
+            "dns2.namecheaphosting.com"
+        ],
+        "domain-name": "www.canaada.ca",
         "fuzzer": "repetition"
     },
     {
         "dns-a": [
-            "103.224.182.249"
+            "74.208.236.50"
         ],
-        "dns-mx": [
-            "park-mx.above.com"
+        "dns-aaaa": [
+            "2607:f1c0:100f:f000::25b"
+        ],
+        "domain-name": "www.ccanada.ca",
+        "fuzzer": "repetition"
+    },
+    {
+        "dns-a": [
+            "35.186.238.101"
         ],
         "dns-ns": [
-            "ns1.above.com",
-            "ns2.above.com"
+            "ns1.smartname.com",
+            "ns2.smartname.com"
         ],
-        "domain-name": "www.belk.ca",
+        "domain-name": "www.canadda.ca",
+        "fuzzer": "repetition"
+    },
+    {
+        "dns-a": [
+            "192.175.119.132"
+        ],
+        "dns-ns": [
+            "ams-ns1.websitehostserver.net",
+            "chi-ns1.websitehostserver.net",
+            "chi-ns2.websitehostserver.net"
+        ],
+        "domain-name": "www.canara.ca",
         "fuzzer": "replacement"
     },
     {
         "dns-a": [
-            "184.168.221.46"
+            "52.58.78.16"
+        ],
+        "dns-aaaa": [
+            "2a05:d014:9da:8c10:306e:3e07:a16f:a552"
         ],
         "dns-ns": [
-            "ns09.domaincontrol.com",
-            "ns10.domaincontrol.com"
+            "ns1.dan.com",
+            "ns2.dan.com"
         ],
-        "domain-name": "www.belo.ca",
+        "domain-name": "www.canads.ca",
+        "fuzzer": "replacement"
+    },
+    {
+        "dns-a": [
+            "107.161.23.204",
+            "168.235.88.209",
+            "188.164.131.200",
+            "192.161.187.200",
+            "198.251.81.30",
+            "198.251.84.92",
+            "204.188.203.155",
+            "209.141.38.71",
+            "45.58.190.82",
+            "64.32.22.102",
+            "70.39.125.244"
+        ],
+        "domain-name": "www.cabada.ca",
+        "fuzzer": "replacement"
+    },
+    {
+        "dns-a": [
+            "184.168.221.58"
+        ],
+        "dns-mx": [
+            "mailstore1.secureserver.net",
+            "smtp.secureserver.net"
+        ],
+        "dns-ns": [
+            "ns55.domaincontrol.com",
+            "ns56.domaincontrol.com"
+        ],
+        "domain-name": "www.cansda.ca",
+        "fuzzer": "replacement"
+    },
+    {
+        "dns-a": [
+            "208.91.197.91"
+        ],
+        "domain-name": "www.canady.ca",
+        "fuzzer": "replacement"
+    },
+    {
+        "dns-a": [
+            "184.69.98.182"
+        ],
+        "domain-name": "www.danada.ca",
+        "fuzzer": "replacement"
+    },
+    {
+        "dns-a": [
+            "132.148.255.142"
+        ],
+        "dns-ns": [
+            "ns21.domaincontrol.com",
+            "ns22.domaincontrol.com"
+        ],
+        "domain-name": "www.fanada.ca",
         "fuzzer": "replacement"
     },
     {
@@ -1136,95 +939,109 @@
             "158.85.87.76"
         ],
         "dns-mx": [
-            "mail.gell.ca"
+            "mail.xanada.ca"
         ],
         "dns-ns": [
             "slns1.namespro.ca",
             "slns2.namespro.ca"
         ],
-        "domain-name": "www.gell.ca",
+        "domain-name": "www.xanada.ca",
         "fuzzer": "replacement"
     },
     {
         "dns-a": [
-            "199.59.242.153"
+            "66.49.254.5"
         ],
-        "domain-name": "www.bwll.ca",
-        "fuzzer": "replacement"
-    },
-    {
-        "dns-a": [
-            "199.59.242.153"
-        ],
-        "domain-name": "www.vell.ca",
-        "fuzzer": "replacement"
-    },
-    {
-        "dns-a": [
-            "17.146.233.10"
-        ],
-        "domain-name": "www.nell.ca",
-        "fuzzer": "replacement"
-    },
-    {
-        "dns-a": [
-            "50.63.202.55"
+        "dns-mx": [
+            "canaca.ca"
         ],
         "dns-ns": [
-            "ns75.domaincontrol.com",
-            "ns76.domaincontrol.com"
+            "ns.canaca.net",
+            "ns2.canaca.net"
         ],
-        "domain-name": "www.belp.ca",
+        "domain-name": "www.canaca.ca",
         "fuzzer": "replacement"
     },
     {
         "dns-a": [
-            "72.55.137.168"
+            "35.186.238.101"
         ],
-        "domain-name": "www.be.ll.ca",
+        "dns-ns": [
+            "ns1.smartname.com",
+            "ns2.smartname.com"
+        ],
+        "domain-name": "www.csnada.ca",
+        "fuzzer": "replacement"
+    },
+    {
+        "dns-a": [
+            "66.155.98.182"
+        ],
+        "domain-name": "www.canasa.ca",
+        "fuzzer": "replacement"
+    },
+    {
+        "dns-a": [
+            "199.79.62.115"
+        ],
+        "dns-mx": [
+            "vanada.ca"
+        ],
+        "dns-ns": [
+            "ns1.md-54.webhostbox.net",
+            "ns2.md-54.webhostbox.net"
+        ],
+        "domain-name": "www.vanada.ca",
+        "fuzzer": "replacement"
+    },
+    {
+        "dns-a": [
+            "199.59.242.153"
+        ],
+        "domain-name": "www.can.ada.ca",
         "fuzzer": "subdomain"
     },
     {
         "dns-a": [
-            "74.208.236.25"
+            "67.223.102.78"
         ],
-        "dns-aaaa": [
-            "2607:f1c0:100f:f000::2e0"
-        ],
-        "domain-name": "www.blel.ca",
+        "domain-name": "ww.wcanada.ca",
         "fuzzer": "transposition"
     },
     {
         "dns-a": [
-            "34.198.182.201"
+            "216.40.47.17"
         ],
-        "domain-name": "www.boll.ca",
+        "domain-name": "www.caanda.ca",
+        "fuzzer": "transposition"
+    },
+    {
+        "dns-a": [
+            "216.40.47.17"
+        ],
+        "domain-name": "www.canaad.ca",
+        "fuzzer": "transposition"
+    },
+    {
+        "dns-a": [
+            "184.168.221.41"
+        ],
+        "dns-ns": [
+            "ns01.domaincontrol.com",
+            "ns02.domaincontrol.com"
+        ],
+        "domain-name": "www.canado.ca",
         "fuzzer": "vowel-swap"
     },
     {
         "dns-a": [
-            "72.52.179.174"
+            "23.20.239.12"
         ],
         "dns-ns": [
-            "ns1.parklogic.com",
-            "ns2.parklogic.com"
+            "nsg1.namebrightdns.com",
+            "nsg2.namebrightdns.com"
         ],
-        "domain-name": "www.bill.ca",
-        "fuzzer": "vowel-swap"
-    },
-    {
-        "dns-a": [
-            "173.201.0.1"
-        ],
-        "dns-mx": [
-            "mailstore1.secureserver.net",
-            "smtp.secureserver.net"
-        ],
-        "dns-ns": [
-            "ns13.domaincontrol.com",
-            "ns14.domaincontrol.com"
-        ],
-        "domain-name": "www.bellca.ca",
+        "domain-name": "www.canada-ca.com",
         "fuzzer": "various"
     }
 ]

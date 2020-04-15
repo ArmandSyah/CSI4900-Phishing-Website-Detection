@@ -23,12 +23,12 @@ def build_model():
 
     df = df.sample(frac=1)  # shuffle the rows
 
-    certs = df.cert_auth.unique()
+    # certs = df.cert_auth.unique()
 
     one_hot_protocol = pd.get_dummies(df['protocol'], columns=['protocol'])
     df = pd.concat([df, one_hot_protocol], axis=1)
-    one_hot_protocol = pd.get_dummies(df['cert_auth'], columns=['cert_auth'])
-    df = pd.concat([df, one_hot_protocol], axis=1)
+    # one_hot_protocol = pd.get_dummies(df['cert_auth'], columns=['cert_auth'])
+    # df = pd.concat([df, one_hot_protocol], axis=1)
     feature_columns = list(df.columns)
     feature_columns.remove('is_legit')
     feature_columns.remove('_id')
@@ -37,15 +37,16 @@ def build_model():
     feature_columns.remove('path')
     feature_columns.remove('query')
     feature_columns.remove('fragment')
-    feature_columns.remove('cert_auth')
+    # feature_columns.remove('cert_auth')
     feature_columns.remove('unknown_url')
     feature_columns.remove('keyword')
+    feature_columns.remove('')
 
     features = df[feature_columns]
     target_variable = df.is_legit
 
     print('\nRandom Forest Results:')
-    rf = RandomForest(features, feature_columns, target_variable, certs)
+    rf = RandomForest(features, feature_columns, target_variable)
     rf.predict_test_set()
 
     print('Pickling random forest')
@@ -55,7 +56,7 @@ def build_model():
     client.close()
 
 class ClassificationModel:
-    def __init__(self, features, feature_columns, target_variables, classifier, certs):
+    def __init__(self, features, feature_columns, target_variables, classifier):
         self.features = features
         self.feature_columns = feature_columns
         self.target_variable = target_variables
@@ -63,7 +64,7 @@ class ClassificationModel:
         self.features_train, self.features_test, self.target_train, self.target_test = train_test_split(
             self.features, self.target_variable, test_size=.5, random_state=42)
         self.clf = classifier.fit(self.features_train, self.target_train)
-        self.certs = certs
+        # self.certs = certs
 
     def predict_test_set(self):
         target_predictions = self.clf.predict(self.features_test)
@@ -94,9 +95,17 @@ class ClassificationModel:
 
         url_df['http'] = 1 if url_df.iloc[0]['protocol'] == 'http' else 0
         url_df['https'] = 1 if url_df.iloc[0]['protocol'] == 'https' else 0
+        url_df['ftp'] = 1 if url_df.iloc[0]['protocol'] == 'ftp' else 0
         
-        for c in self.certs:
-            url_df[c] = 1 if url_df.iloc[0]['cert_auth'] == c else 0
+        # url_cert = url_df.iloc[0]['cert_auth']
+        # if url_cert not in self.certs:
+        #     self.certs.append(url_cert)
+
+        # if url_cert not in self.feature_columns:
+        #     self.feature_columns.append(url_cert)
+
+        # for c in self.certs:
+        #     url_df[c] = 1 if url_df.iloc[0]['cert_auth'] == c else 0
 
         url_features = url_df[self.feature_columns]
         target_prediction = self.clf.predict(url_features)
@@ -111,16 +120,16 @@ class ClassificationModel:
         url_df['http'] = 1 if url_df.iloc[0]['protocol'] == 'http' else 0
         url_df['https'] = 1 if url_df.iloc[0]['protocol'] == 'https' else 0
         
-        for c in self.certs:
-            url_df[c] = 1 if url_df.iloc[0]['cert_auth'] == c else 0
+        # for c in self.certs:
+        #     url_df[c] = 1 if url_df.iloc[0]['cert_auth'] == c else 0
             
         url_features = url_df[self.feature_columns]
         self.clf.fit(url_features, [label])
 
 class RandomForest(ClassificationModel):
-    def __init__(self, features, feature_columns, target_variable, certs):
+    def __init__(self, features, feature_columns, target_variable):
         clf = RandomForestClassifier(n_estimators=100)
-        super().__init__(features, feature_columns, target_variable, clf, certs)
+        super().__init__(features, feature_columns, target_variable, clf)
 
 if __name__ == "__main__":
     build_model()

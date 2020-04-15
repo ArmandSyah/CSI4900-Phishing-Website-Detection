@@ -5,6 +5,7 @@ import pickle
 from pymongo import MongoClient
 from src.website_elasticsearch import Website
 from src.MLEvaluation.train_model import RandomForest
+from cert import get_hostinfo
 
 def evaluate_websites(sites_to_evaluate_file: str, keyword: str):
     client = MongoClient('localhost', 27017)
@@ -27,7 +28,18 @@ def evaluate_websites(sites_to_evaluate_file: str, keyword: str):
         u['is_legit'] = int(predicted_result)
         u['confidence_score'] = confidence_score
         evaluation_results.insert(u)
-        url_es = Website(unknown_url=url, keyword=keyword, is_legit=int(predicted_result))
+        hostinfo = get_hostinfo(url)
+        import pprint
+        pprint.pprint(hostinfo)
+        url_es = Website(url=url,
+                            domain=hostinfo['domain'],
+                            hostname=hostinfo['hostname'], 
+                            keyword=keyword, 
+                            is_legit=bool(int(predicted_result)), 
+                            certificate_authority_registrar=hostinfo['issuer'],
+                            date_of_creation_ca=hostinfo['notvalidbefore'],
+                            date_of_expiration_ca=hostinfo['notvalidafter'],
+                            confidence_score=confidence_score)
         url_es.save()
 
 if __name__ == "__main__":

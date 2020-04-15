@@ -3,17 +3,40 @@
   "censys_Secret": "",
   "shodan_key": "",
   "datasets": [
-      {
-          "keyword": "paypal",
-          "file_path": "phishing_sites\\paypal.txt",
-          "is_legit": 0
-      },
-      {
-        "keyword": "paypal",
-        "file_path": "phishing_sites\\legit_urls.txt",
-        "is_legit": 1
-      }
+    {
+      "keyword": "paypal",
+      "file_path": "phishing_sites\\paypal.txt",
+      "is_legit": 0,
+      "file_type": "txt"
+    },
+    {
+      "keyword": "paypal",
+      "file_path": "phishing_sites\\legit_urls.txt",
+      "is_legit": 1,
+      "file_type": "txt"
+    },
+    {
+      "keyword": "",
+      "file_path": "phishing_sites\\retrieved_phish_urls.txt",
+      "is_legit": 0,
+      "file_type": "txt"
+    },
+    {
+      "keyword": "",
+      "file_path": "phishing_sites\\Benign_list_big_final.csv",
+      "is_legit": 1,
+      "file_type": "csv",
+      "csv_url_pos": 0
+    },
+    {
+      "keyword": "",
+      "file_path": "phishing_sites\\urldata.csv",
+      "is_legit": 1,
+      "file_type": "csv",
+      "num_rows": 30000,
+      "csv_url_pos": 1
+    }
   ],
-  "primary_keyword": "bell",
-  "url": "https://www.bell.ca/"
+  "primary_keyword": "cerb",
+  "url": "https://www.canada.ca/en/services/benefits/ei/cerb-application.html"
 }
