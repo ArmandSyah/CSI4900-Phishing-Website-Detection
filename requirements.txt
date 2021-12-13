@@ -18,7 +18,7 @@ html-similarity==0.3.2
 idna==2.8
 ImageHash==4.0
 joblib==0.14.1
-lxml==4.5.0
+lxml==4.6.5
 mmh3==2.5.1
 netaddr==0.7.19
 numpy==1.18.1
